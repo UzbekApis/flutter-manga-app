@@ -1,21 +1,23 @@
 ═══════════════════════════════════════════════════════════
-  TEZKOR COLAB BUILD (COPY-PASTE QILING)
+  GOOGLE COLAB - TO'LIQ ISHLAYOTGAN SCRIPT
 ═══════════════════════════════════════════════════════════
 
-🔥 BITTA CELL'DA HAMMASI (20 daqiqa):
+📋 COPY-PASTE QILING (! belgisi bilan):
 
 ```python
-# 1. Setup
+# 1. Setup (5 daqiqa)
 !apt-get update -qq
 !apt-get install -y -qq curl git unzip xz-utils zip libglu1-mesa openjdk-11-jdk
 
-# 2. Flutter
+# 2. Flutter (3 daqiqa)
 !git clone https://github.com/flutter/flutter.git -b stable --depth 1
 
 import os
 os.environ['PATH'] = f"{os.environ['PATH']}:/content/flutter/bin"
 
-# 3. Android SDK
+!/content/flutter/bin/flutter --version
+
+# 3. Android SDK (3 daqiqa)
 !wget -q https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
 !mkdir -p /content/android-sdk/cmdline-tools
 !unzip -q commandlinetools-linux-9477386_latest.zip -d /content/android-sdk/cmdline-tools
@@ -30,12 +32,12 @@ os.environ['ANDROID_SDK_ROOT'] = '/content/android-sdk'
 # 4. Loyiha yuklash (GitHub'dan)
 !git clone https://github.com/UzbekApis/flutter-manga-app.git
 
-# 5. Build
+# 5. Build (10 daqiqa)
 %cd /content/flutter-manga-app
 !/content/flutter/bin/flutter pub get
 !/content/flutter/bin/flutter build apk --release
 
-# 6. Download
+# 6. APK yuklab olish
 from google.colab import files
 files.download('/content/flutter-manga-app/build/app/outputs/flutter-apk/app-release.apk')
 
@@ -44,30 +46,51 @@ print("\n✅ TAYYOR! APK yuklab olindi!")
 
 ═══════════════════════════════════════════════════════════
 
-📝 QANDAY ISHLASH:
+⏱️ JAMI VAQT: ~20 daqiqa
+
+═══════════════════════════════════════════════════════════
+
+🎯 QADAMLAR:
 
 1. Colab ochish: https://colab.research.google.com
-2. Yuqoridagi kodni copy qiling
-3. Yangi cell'ga paste qiling
-4. Run tugmasini bosing ▶️
-5. ZIP faylni yuklang (flutter_manga_app.zip)
-6. 15 daqiqa kuting ☕
+2. Yangi notebook yaratish
+3. Yuqoridagi kodni copy qiling
+4. Yangi cell'ga paste qiling
+5. Run tugmasini bosing ▶️
+6. 20 daqiqa kuting ☕
 7. APK yuklab olindi! 🎉
 
 ═══════════════════════════════════════════════════════════
 
 ⚠️ MUHIM:
 
-• ZIP fayl nomi: flutter_manga_app.zip
-• Ichida: flutter_manga_app/ papkasi
-• Barcha fayllar to'g'ri joylashgan
+• ! belgisi bilan boshlangan komandalar shell'da ishlaydi
+• ! belgisiz komandalar Python'da ishlaydi
+• Har bir qator to'g'ri yozilgan
 
 ═══════════════════════════════════════════════════════════
 
-🎯 AGAR XATOLIK BO'LSA:
+🐛 XATOLIK BO'LSA:
 
 1. Runtime → Restart runtime
 2. Qaytadan ishga tushiring
-3. Sabr qiling, vaqt kerak
+3. Internet tezligiga bog'liq
+
+═══════════════════════════════════════════════════════════
+
+📱 APK O'RNATISH:
+
+1. APK yuklab olindi (app-release.apk)
+2. Telefonga o'tkazing
+3. Settings → Security → Unknown sources ✅
+4. APK'ni bosing
+5. Install
+6. Ishlatishni boshlang! 🎉
+
+═══════════════════════════════════════════════════════════
+
+✅ MUVAFFAQIYATLI BUILD!
+
+Endi sizda ishlaydigan manga reader ilovasi bor!
 
 ═══════════════════════════════════════════════════════════
