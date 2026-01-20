@@ -5,6 +5,7 @@ Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android-brightgreen.svg)](https://www.android.com/)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb)
 
 ## ✨ Xususiyatlar
 
@@ -24,19 +25,27 @@ Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
   <img src="screenshots/reader.png" width="200" />
 </p>
 
-## 🚀 Google Colab'da Build qilish
+## 🚀 Google Colab'da Build qilish (TAVSIYA ETILADI)
 
-### Tezkor usul (15 daqiqa):
+### ⚡ Eng oson usul - Jupyter Notebook:
 
-1. [Google Colab](https://colab.research.google.com) ochish
-2. [QUICK_COLAB.txt](QUICK_COLAB.txt) faylidagi kodni copy-paste qiling
-3. Run tugmasini bosing
-4. Loyiha ZIP'ini yuklang
-5. APK yuklab olindi! 🎉
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb)
 
-### Batafsil yo'riqnoma:
+1. Yuqoridagi tugmani bosing
+2. Runtime → Run all
+3. 20 daqiqa kuting ☕
+4. APK yuklab olindi! 🎉
 
-📖 [COLAB_STEP_BY_STEP.md](COLAB_STEP_BY_STEP.md) - Qadam-baqadam
+### 📝 Yoki qo'lda:
+
+Har bir cell'ni ketma-ket ishga tushiring:
+1. System packages
+2. Flutter
+3. Android SDK
+4. Loyiha yuklash
+5. Dependencies
+6. Build APK
+7. Yuklab olish
 
 ## 💻 Lokal Build
 
@@ -123,9 +132,20 @@ Ilova to'g'ridan-to'g'ri Senkuro GraphQL API bilan ishlaydi:
 - Internet ulanishini tekshiring
 - Cache'ni tozalang
 
+### Colab'da build xatolik
+- Runtime → Restart runtime
+- Barcha cell'larni qaytadan ishga tushiring
+- [Jupyter Notebook](Flutter_Manga_App_Builder.ipynb) ichida diagnostika cell'i bor
+
 ## 🤝 Hissa qo'shish
 
 Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
+
+1. Fork qiling
+2. Feature branch yarating (`git checkout -b feature/AmazingFeature`)
+3. Commit qiling (`git commit -m 'Add some AmazingFeature'`)
+4. Push qiling (`git push origin feature/AmazingFeature`)
+5. Pull Request oching
 
 ## 📄 Litsenziya
 
@@ -146,6 +166,19 @@ Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
 
 Agar loyiha yoqsa, star bering! ⭐
 
+## 📚 Qo'shimcha
+
+- **Jupyter Notebook**: [Flutter_Manga_App_Builder.ipynb](Flutter_Manga_App_Builder.ipynb)
+- **Colab yo'riqnomalar**: 
+  - [COLAB_STEP_BY_STEP.md](COLAB_STEP_BY_STEP.md)
+  - [COLAB_WORKING.md](COLAB_WORKING.md)
+  - [COLAB_FIXED.md](COLAB_FIXED.md)
+
 ---
 
 <p align="center">Made with ❤️ by UzbekApis</p>
+<p align="center">
+  <a href="https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  </a>
+</p>
