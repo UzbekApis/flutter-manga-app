@@ -1,106 +1,151 @@
-# Manga Reader - Flutter ilovasi
+# 📱 Flutter Manga Reader
 
 Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
 
-## Xususiyatlar
+[![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-Android-brightgreen.svg)](https://www.android.com/)
 
-✅ **Qidirish** - Manga qidirish (ruscha/inglizcha)
-✅ **Online o'qish** - To'g'ridan-to'g'ri Senkuro API orqali
-✅ **Offline o'qish** - Chapterlarni yuklab olish
-✅ **Vertikal scroll** - Pastdan yuqoriga o'qish
-✅ **Auto-fit** - Rasmlar ekranga moslashadi
-✅ **Cache** - Tez yuklash uchun
+## ✨ Xususiyatlar
 
-## Google Colab'da build qilish
+- 🔍 **Qidirish** - Manga qidirish (ruscha/inglizcha)
+- 📖 **Online o'qish** - To'g'ridan-to'g'ri Senkuro API orqali
+- 💾 **Offline o'qish** - Chapterlarni yuklab olish
+- 📜 **Vertikal scroll** - Pastdan yuqoriga o'qish
+- 🖼️ **Auto-fit** - Rasmlar ekranga moslashadi
+- ⚡ **Cache** - Tez yuklash uchun
+- 🌙 **Dark mode** - Qorong'i tema
 
-### 1. Colab notebook yarating va quyidagi kodni kiriting:
+## 📸 Screenshots
 
-```python
-# Flutter o'rnatish
-!wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.0-stable.tar.xz
-!tar xf flutter_linux_3.16.0-stable.tar.xz
-!export PATH="$PATH:`pwd`/flutter/bin"
+<p align="center">
+  <img src="screenshots/home.png" width="200" />
+  <img src="screenshots/search.png" width="200" />
+  <img src="screenshots/reader.png" width="200" />
+</p>
 
-# Android SDK o'rnatish
-!wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
-!unzip commandlinetools-linux-9477386_latest.zip -d android-sdk
-!yes | android-sdk/cmdline-tools/bin/sdkmanager --sdk_root=$PWD/android-sdk --licenses
-!android-sdk/cmdline-tools/bin/sdkmanager --sdk_root=$PWD/android-sdk "platform-tools" "platforms;android-33" "build-tools;33.0.0"
+## 🚀 Google Colab'da Build qilish
 
-# Loyihani yuklash (GitHub'dan yoki zip)
-!git clone <your-repo-url> manga_app
-# yoki
-from google.colab import files
-uploaded = files.upload()  # ZIP faylni yuklang
-!unzip manga_reader_app.zip
+### Tezkor usul (15 daqiqa):
 
-# Dependencies o'rnatish
-%cd manga_app
-!flutter/bin/flutter pub get
+1. [Google Colab](https://colab.research.google.com) ochish
+2. [QUICK_COLAB.txt](QUICK_COLAB.txt) faylidagi kodni copy-paste qiling
+3. Run tugmasini bosing
+4. Loyiha ZIP'ini yuklang
+5. APK yuklab olindi! 🎉
 
-# APK build qilish
-!flutter/bin/flutter build apk --release
+### Batafsil yo'riqnoma:
 
-# APK yuklab olish
-from google.colab import files
-files.download('build/app/outputs/flutter-apk/app-release.apk')
-```
+📖 [COLAB_STEP_BY_STEP.md](COLAB_STEP_BY_STEP.md) - Qadam-baqadam
 
-### 2. Yoki qisqa yo'l:
+## 💻 Lokal Build
 
 ```bash
-# Colab'da
-!pip install flutter-build
-!flutter-build build --platform android
-```
+# Clone
+git clone https://github.com/UzbekApis/flutter-manga-app.git
+cd flutter-manga-app
 
-## Lokal build (agar Android Studio ishlasa)
-
-```bash
-cd flutter_manga_app
+# Dependencies
 flutter pub get
+
+# Run
 flutter run
-# yoki
+
+# Build APK
 flutter build apk --release
 ```
 
-## Foydalanish
+## 📦 Dependencies
 
-1. Ilovani oching
-2. Qidiruv maydoniga manga nomini kiriting (masalan: "Элисед")
-3. Manga tanlang
-4. Chapterni tanlang
-5. O'qing!
+```yaml
+dependencies:
+  http: ^1.1.0              # API so'rovlar
+  provider: ^6.1.1          # State management
+  sqflite: ^2.3.0           # Local database
+  path_provider: ^2.1.1     # File paths
+  cached_network_image: ^3.3.0  # Image cache
+  photo_view: ^0.14.0       # Image viewer
+  dio: ^5.4.0               # Downloads
+  permission_handler: ^11.1.0   # Permissions
+  flutter_spinkit: ^5.2.0   # Loading indicators
+```
 
-### Yuklab olish:
-- Reader ekranida yuqori o'ng burchakdagi download tugmasini bosing
-- Yuklab olingan chapterlar "Downloads" bo'limida
+## 🏗️ Arxitektura
 
-### Offline o'qish:
-- Downloads bo'limidan yuklab olingan chapterni oching
-- Internet kerak emas!
+```
+lib/
+├── main.dart                 # Entry point
+├── models/                   # Data models
+│   ├── manga.dart
+│   └── chapter.dart
+├── providers/                # State management
+│   └── manga_provider.dart
+├── services/                 # Business logic
+│   ├── api_service.dart      # Senkuro API
+│   └── download_service.dart # Offline storage
+└── screens/                  # UI screens
+    ├── home_screen.dart
+    ├── manga_detail_screen.dart
+    ├── reader_screen.dart
+    └── downloads_screen.dart
+```
 
-## Texnologiyalar
-
-- **Flutter 3.0+**
-- **Provider** - State management
-- **HTTP** - API so'rovlar
-- **Dio** - Yuklab olish
-- **SQLite** - Local storage
-- **Cached Network Image** - Rasm cache
-
-## API
+## 🔌 API
 
 Ilova to'g'ridan-to'g'ri Senkuro GraphQL API bilan ishlaydi:
-- `https://api.senkuro.me/graphql`
 
-## Muammolar
+- **Base URL**: `https://api.senkuro.me/graphql`
+- **Operations**: 
+  - `search` - Manga qidirish
+  - `fetchManga` - Manga ma'lumotlari
+  - `fetchMangaChapters` - Chapterlar ro'yxati
+  - `fetchMangaChapter` - Chapter rasmlar
 
-Agar 503 xatolik chiqsa:
-- Bir necha daqiqa kuting
-- Qayta urinib ko'ring
-- Senkuro serveri vaqtincha band bo'lishi mumkin
+## 📱 Foydalanish
 
-## Litsenziya
+1. **Qidirish**: Qidiruv maydoniga manga nomini kiriting
+2. **Tanlash**: Manga tanlang va chapterlar ro'yxatini ko'ring
+3. **O'qish**: Chapterni bosing va o'qishni boshlang
+4. **Yuklab olish**: Reader ekranida download tugmasini bosing
+5. **Offline**: Downloads bo'limidan yuklab olingan chapterlarni oching
 
-MIT License
+## 🐛 Muammolar
+
+### 503 Service Unavailable
+- Senkuro serveri vaqtincha band
+- Bir necha daqiqa kutib qayta urinib ko'ring
+
+### Yuklab olish ishlamayapti
+- Storage permission tekshiring
+- Settings → Apps → Manga Reader → Permissions
+
+### Rasmlar yuklanmayapti
+- Internet ulanishini tekshiring
+- Cache'ni tozalang
+
+## 🤝 Hissa qo'shish
+
+Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
+
+## 📄 Litsenziya
+
+[MIT License](LICENSE)
+
+## 👨‍💻 Muallif
+
+**UzbekApis**
+- GitHub: [@UzbekApis](https://github.com/UzbekApis)
+
+## 🙏 Minnatdorchilik
+
+- [Senkuro.me](https://senkuro.me) - Manga ma'lumotlari uchun
+- [Flutter](https://flutter.dev) - Framework
+- Barcha contributors'larga
+
+## ⭐ Star History
+
+Agar loyiha yoqsa, star bering! ⭐
+
+---
+
+<p align="center">Made with ❤️ by UzbekApis</p>

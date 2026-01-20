@@ -1,0 +1,107 @@
+═══════════════════════════════════════════════════════════
+  GOOGLE COLAB'DA FLUTTER APK BUILD QILISH (ODDIY USUL)
+═══════════════════════════════════════════════════════════
+
+📋 QADAMLAR:
+
+1️⃣ COLAB NOTEBOOK YARATING
+   https://colab.research.google.com
+
+2️⃣ QUYIDAGI KODNI BIRINCHI CELL'GA KIRITING:
+
+```python
+# Hamma kerakli narsalarni o'rnatish
+!apt-get update -qq
+!apt-get install -y -qq curl git unzip xz-utils zip libglu1-mesa openjdk-11-jdk
+
+# Flutter
+!git clone https://github.com/flutter/flutter.git -b stable --depth 1
+import os
+os.environ['PATH'] = f"{os.environ['PATH']}:/content/flutter/bin"
+
+# Android SDK
+!wget -q https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
+!mkdir -p android-sdk/cmdline-tools
+!unzip -q commandlinetools-linux-9477386_latest.zip -d android-sdk/cmdline-tools
+!mv android-sdk/cmdline-tools/cmdline-tools android-sdk/cmdline-tools/latest
+os.environ['ANDROID_HOME'] = '/content/android-sdk'
+
+# SDK packages
+!/content/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=/content/android-sdk "platform-tools" "platforms;android-33" "build-tools;33.0.2"
+!yes | /content/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=/content/android-sdk --licenses
+
+print("✅ Setup complete!")
+```
+
+3️⃣ LOYIHANI YUKLASH (yangi cell):
+
+```python
+# ZIP faylni yuklash
+from google.colab import files
+uploaded = files.upload()
+
+# Unzip
+import os
+zip_file = list(uploaded.keys())[0]
+!unzip -q {zip_file}
+
+# Papka nomini topish
+!ls -la
+
+print("✅ Project uploaded!")
+```
+
+4️⃣ BUILD QILISH (yangi cell):
+
+```python
+# Loyiha papkasiga o'tish (nomini o'zgartiring!)
+%cd flutter_manga_app
+
+# Dependencies
+!/content/flutter/bin/flutter pub get
+
+# Build
+!/content/flutter/bin/flutter build apk --release
+
+print("✅ Build complete!")
+```
+
+5️⃣ APK YUKLAB OLISH (yangi cell):
+
+```python
+from google.colab import files
+files.download('build/app/outputs/flutter-apk/app-release.apk')
+```
+
+═══════════════════════════════════════════════════════════
+
+⚠️ MUHIM:
+
+• Har bir cell'ni ketma-ket ishga tushiring
+• Har bir cell tugashini kuting
+• Build ~10-15 daqiqa davom etadi
+• Internet kerak
+
+═══════════════════════════════════════════════════════════
+
+🐛 XATOLIKLAR:
+
+1. "Flutter not found"
+   → 2-chi cell'ni qayta ishga tushiring
+
+2. "Android licenses"
+   → Bu normal, davom eting
+
+3. "Gradle error"
+   → Colab'ni restart qiling va qaytadan boshlang
+
+═══════════════════════════════════════════════════════════
+
+✅ TAYYOR APK:
+
+1. APK yuklab olindi
+2. Telefonga o'tkazing
+3. "Unknown sources" yoqing
+4. O'rnating va ishlatishni boshlang!
+
+═══════════════════════════════════════════════════════════
