@@ -35,7 +35,7 @@ def run_step(step_name, command, check_path=None):
 # 1. Tizim kutubxonalarini o'rnatish
 run_step(
     "Tizim kutubxonalarini o'rnatish",
-    "apt-get update -qq && apt-get install -y -qq curl git unzip xz-utils zip libglu1-mesa openjdk-11-jdk"
+    "apt-get update -qq && apt-get install -y -qq curl git unzip xz-utils zip libglu1-mesa openjdk-11-jdk cmake ninja-build"
 )
 
 # 2. Flutter o'rnatish
