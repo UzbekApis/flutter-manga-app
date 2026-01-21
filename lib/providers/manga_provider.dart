@@ -58,6 +58,16 @@ class MangaProvider extends ChangeNotifier {
   void clearSearch() {
     _searchResults = [];
     _error = null;
+    // Tag qidirish natijalarini saqlab qolish
+    notifyListeners();
+  }
+
+  void clearAllSearches() {
+    _searchResults = [];
+    _tagFilteredMangas = [];
+    _selectedTags.clear();
+    _excludedTags.clear();
+    _error = null;
     notifyListeners();
   }
 

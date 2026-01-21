@@ -27,36 +27,34 @@ class Manga {
       }
     }
 
-    // Inglizcha nomni olish, agar bo'lmasa original nom
-    String name = json['originalName'] ?? 'Unknown';
+    // Inglizcha nomni olish
+    String name = 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
-      // Avval inglizcha qidirish
-      String? enName;
+      // Avval inglizcha
       for (var title in titles) {
-        if (title['lang'] == 'EN') {
-          enName = title['content'];
+        if (title['lang'] == 'EN' && title['content'] != null) {
+          name = title['content'].toString();
           break;
         }
       }
-      
-      // Agar inglizcha topilsa, uni ishlatamiz
-      if (enName != null && enName.isNotEmpty) {
-        name = enName;
-      } else if (titles.isNotEmpty) {
-        // Agar inglizcha bo'lmasa, birinchi mavjud nomni olish
-        final firstTitle = titles.first['content'];
-        if (firstTitle != null && firstTitle.toString().isNotEmpty) {
-          name = firstTitle.toString();
-        }
+      // Agar inglizcha yo'q bo'lsa, originalName
+      if (name == 'Unknown' && json['originalName'] != null) {
+        name = json['originalName'].toString();
       }
+      // Agar hali ham yo'q bo'lsa, birinchi title
+      if (name == 'Unknown' && titles.isNotEmpty && titles.first['content'] != null) {
+        name = titles.first['content'].toString();
+      }
+    } else if (json['originalName'] != null) {
+      name = json['originalName'].toString();
     }
 
     return Manga(
       id: json['id'],
       slug: json['slug'],
       name: name,
-      originalName: json['originalName'],
+      originalName: json['originalName']?.toString(),
       coverUrl: coverUrl,
       type: json['mangaType'] ?? json['type'],
       status: json['mangaStatus'] ?? json['status'],
@@ -72,6 +70,9 @@ class MangaDetail {
   final String? coverUrl;
   final List<Branch> branches;
   final int? chapters;
+  final List<String> tags;
+  final String? status;
+  final String? type;
 
   MangaDetail({
     required this.id,
@@ -81,6 +82,9 @@ class MangaDetail {
     this.coverUrl,
     required this.branches,
     this.chapters,
+    this.tags = const [],
+    this.status,
+    this.type,
   });
 
   factory MangaDetail.fromJson(Map<String, dynamic> json) {
@@ -89,28 +93,27 @@ class MangaDetail {
       coverUrl = json['cover']['original']['url'];
     }
 
-    // Inglizcha nomni olish, agar bo'lmasa original nom
-    String name = json['originalName']?['content'] ?? 'Unknown';
+    // Inglizcha nomni olish
+    String name = 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
-      String? enName;
+      // Avval inglizcha
       for (var title in titles) {
-        if (title['lang'] == 'EN') {
-          enName = title['content'];
+        if (title['lang'] == 'EN' && title['content'] != null) {
+          name = title['content'].toString();
           break;
         }
       }
-      
-      // Agar inglizcha topilsa, uni ishlatamiz
-      if (enName != null && enName.isNotEmpty) {
-        name = enName;
-      } else if (titles.isNotEmpty) {
-        // Agar inglizcha bo'lmasa, birinchi mavjud nomni olish
-        final firstTitle = titles.first['content'];
-        if (firstTitle != null && firstTitle.toString().isNotEmpty) {
-          name = firstTitle.toString();
-        }
+      // Agar inglizcha yo'q bo'lsa, originalName
+      if (name == 'Unknown' && json['originalName']?['content'] != null) {
+        name = json['originalName']['content'].toString();
       }
+      // Agar hali ham yo'q bo'lsa, birinchi title
+      if (name == 'Unknown' && titles.isNotEmpty && titles.first['content'] != null) {
+        name = titles.first['content'].toString();
+      }
+    } else if (json['originalName']?['content'] != null) {
+      name = json['originalName']['content'].toString();
     }
 
     // Inglizcha tavsifni olish
@@ -136,6 +139,23 @@ class MangaDetail {
       }
     }
 
+    // Taglarni olish
+    final List<String> tags = [];
+    if (json['labels'] != null) {
+      final labels = json['labels'] as List;
+      for (var label in labels) {
+        if (label['titles'] != null) {
+          final labelTitles = label['titles'] as List;
+          for (var title in labelTitles) {
+            if (title['lang'] == 'EN' && title['content'] != null) {
+              tags.add(title['content'].toString());
+              break;
+            }
+          }
+        }
+      }
+    }
+
     final branches = (json['branches'] as List?)
             ?.map((b) => Branch.fromJson(b))
             .toList() ??
@@ -149,6 +169,9 @@ class MangaDetail {
       coverUrl: coverUrl,
       branches: branches,
       chapters: json['chapters'],
+      tags: tags,
+      status: json['mangaStatus'] ?? json['status'],
+      type: json['mangaType'] ?? json['type'],
     );
   }
 }

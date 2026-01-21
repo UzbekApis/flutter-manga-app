@@ -245,6 +245,14 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
   ) async {
     for (int i = 0; i < chapters.length; i++) {
       final chapter = chapters[i];
+      
+      // Dublikat tekshiruvi - agar allaqachon yuklab olingan bo'lsa, o'tkazib yuborish
+      final isAlreadyDownloaded = await context.read<MangaProvider>().isChapterDownloaded(chapter.slug);
+      if (isAlreadyDownloaded) {
+        print('Chapter ${chapter.number} allaqachon yuklab olingan, o\'tkazib yuborildi');
+        continue;
+      }
+      
       final chapterDetail = await ApiService.getChapterImages(chapter.slug);
       
       if (chapterDetail != null) {
@@ -261,6 +269,9 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
         );
         _downloadedChapters.add(chapter.slug);
       }
+      
+      // API rate limit uchun kichik kechikish
+      await Future.delayed(const Duration(milliseconds: 500));
     }
   }
 
@@ -427,6 +438,78 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
                       ),
                     ),
                   ),
+                // Ma'lumotlar (Status, Type, Tags)
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Status va Type
+                        Row(
+                          children: [
+                            if (_detail?.status != null) ...[
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                decoration: BoxDecoration(
+                                  color: Colors.green.shade800,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  _detail!.status!,
+                                  style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                            ],
+                            if (_detail?.type != null)
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.shade800,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Text(
+                                  _detail!.type!,
+                                  style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                          ],
+                        ),
+                        // Tags
+                        if (_detail?.tags != null && _detail!.tags.isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          Text(
+                            'Taglar',
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blueAccent,
+                                ),
+                          ),
+                          const SizedBox(height: 8),
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: _detail!.tags.map((tag) {
+                              return Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                decoration: BoxDecoration(
+                                  color: Colors.purple.shade800.withOpacity(0.3),
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(color: Colors.purple.shade700),
+                                ),
+                                child: Text(
+                                  tag,
+                                  style: const TextStyle(fontSize: 12),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
                 if (_detail?.description != null)
                   SliverToBoxAdapter(
                     child: Padding(

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/manga.dart';
 import '../models/chapter.dart';
+import 'proxy_service.dart';
 
 class ApiException implements Exception {
   final String message;
@@ -24,11 +25,21 @@ class ApiService {
 
   static Future<dynamic> _post(Map<String, dynamic> payload) async {
     try {
-      final response = await http.post(
+      // Proxy yoqilgan bo'lsa, yangi proxy tanlash
+      if (ProxyService.isEnabled) {
+        ProxyService.getRandomProxy();
+        print('Using proxy: ${ProxyService.currentProxy}');
+      }
+      
+      final client = ProxyService.createClient();
+      
+      final response = await client.post(
         Uri.parse(baseUrl),
         headers: headers,
         body: jsonEncode(payload),
       ).timeout(timeout);
+      
+      client.close();
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);

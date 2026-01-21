@@ -3,10 +3,15 @@ import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
 
 class DownloadService {
-  static final Dio _dio = Dio();
+  static final Dio _dio = Dio(
+    BaseOptions(
+      connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 30),
+    ),
+  );
 
-  // Chapter yuklab olish
-  static Future<String?> downloadChapter(
+  // Parallel yuklab olish (tezroq)
+  static Future<String?> downloadChapterFast(
     String chapterSlug,
     List<String> imageUrls,
     Function(int, int) onProgress,
@@ -19,13 +24,31 @@ class DownloadService {
         await chapterDir.create(recursive: true);
       }
 
-      for (int i = 0; i < imageUrls.length; i++) {
-        final url = imageUrls[i];
-        final fileName = 'page_${i + 1}.jpg';
-        final filePath = '${chapterDir.path}/$fileName';
+      int completed = 0;
+      final total = imageUrls.length;
 
-        await _dio.download(url, filePath);
-        onProgress(i + 1, imageUrls.length);
+      // Parallel download - 5 ta bir vaqtda
+      final batchSize = 5;
+      for (int i = 0; i < imageUrls.length; i += batchSize) {
+        final end = (i + batchSize < imageUrls.length) ? i + batchSize : imageUrls.length;
+        final batch = imageUrls.sublist(i, end);
+        
+        await Future.wait(
+          batch.asMap().entries.map((entry) async {
+            final index = i + entry.key;
+            final url = entry.value;
+            final fileName = 'page_${index + 1}.jpg';
+            final filePath = '${chapterDir.path}/$fileName';
+            
+            try {
+              await _dio.download(url, filePath);
+              completed++;
+              onProgress(completed, total);
+            } catch (e) {
+              print('Error downloading page ${index + 1}: $e');
+            }
+          }),
+        );
       }
 
       return chapterDir.path;
@@ -33,6 +56,16 @@ class DownloadService {
       print('Download error: $e');
       return null;
     }
+  }
+
+  // Chapter yuklab olish (eski versiya - sekinroq)
+  static Future<String?> downloadChapter(
+    String chapterSlug,
+    List<String> imageUrls,
+    Function(int, int) onProgress,
+  ) async {
+    // Tez versiyani ishlatish
+    return downloadChapterFast(chapterSlug, imageUrls, onProgress);
   }
 
   // Yuklab olingan chapterlarni olish
