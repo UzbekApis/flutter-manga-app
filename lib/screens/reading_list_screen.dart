@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../providers/manga_provider.dart';
 import 'manga_detail_screen.dart';
+import 'reader_screen.dart';
 
 class ReadingListScreen extends StatefulWidget {
   const ReadingListScreen({super.key});
@@ -60,6 +61,9 @@ class _ReadingListScreenState extends State<ReadingListScreen> {
 
   Widget _buildMangaCard(Map<String, dynamic> manga) {
     final lastChapter = manga['lastChapterNumber'] as String?;
+    final lastChapterSlug = manga['lastChapterSlug'] as String?;
+    final lastPageIndex = manga['lastPageIndex'] as int? ?? 0;
+    final scrollOffset = (manga['scrollOffset'] as num?)?.toDouble() ?? 0.0;
     final totalChapters = manga['totalChapters'] as int? ?? 0;
     
     return Card(
@@ -67,15 +71,36 @@ class _ReadingListScreenState extends State<ReadingListScreen> {
       color: Colors.grey.shade900,
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MangaDetailScreen(
-                mangaSlug: manga['slug'] as String,
-                mangaId: manga['id'] as String,
+          // Agar oxirgi chapter ma'lum bo'lsa, to'g'ridan-to'g'ri reader'ga o'tish
+          if (lastChapterSlug != null && lastChapter != null) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReaderScreen(
+                  chapterSlug: lastChapterSlug,
+                  chapterNumber: lastChapter,
+                  initialPage: lastPageIndex,
+                  initialScrollOffset: scrollOffset,
+                  mangaId: manga['id'] as String,
+                  mangaSlug: manga['slug'] as String,
+                  mangaName: manga['name'] as String,
+                  mangaCoverUrl: manga['coverUrl'] as String?,
+                  totalChapters: totalChapters,
+                ),
               ),
-            ),
-          );
+            );
+          } else {
+            // Aks holda manga detail'ga o'tish
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MangaDetailScreen(
+                  mangaSlug: manga['slug'] as String,
+                  mangaId: manga['id'] as String,
+                ),
+              ),
+            );
+          }
         },
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -144,13 +169,19 @@ class _ReadingListScreenState extends State<ReadingListScreen> {
                       ),
                     const SizedBox(height: 4),
                     Text(
-                      'Davom etish uchun bosing',
+                      lastChapterSlug != null 
+                          ? 'Davom etish uchun bosing'
+                          : 'Manga sahifasiga o\'tish',
                       style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.arrow_forward_ios, size: 16),
+              Icon(
+                lastChapterSlug != null ? Icons.play_arrow : Icons.arrow_forward_ios,
+                size: lastChapterSlug != null ? 32 : 16,
+                color: lastChapterSlug != null ? Colors.blue : null,
+              ),
             ],
           ),
         ),

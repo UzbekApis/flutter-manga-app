@@ -105,10 +105,12 @@ class MangaProvider extends ChangeNotifier {
     String chapterSlug,
     String chapterNumber,
     int pageIndex,
-    int totalChapters,
-  ) async {
+    int totalChapters, {
+    double? scrollOffset,
+  }) async {
     await DatabaseService.updateReadingProgress(
       id, slug, name, coverUrl, chapterSlug, chapterNumber, pageIndex, totalChapters,
+      scrollOffset: scrollOffset,
     );
     await loadReadingList();
   }
@@ -222,8 +224,20 @@ class MangaProvider extends ChangeNotifier {
   }
 
   Future<void> loadAllTags() async {
-    _allTags = await ApiService.getMangaFilters();
-    notifyListeners();
+    try {
+      _isLoading = true;
+      notifyListeners();
+      
+      _allTags = await ApiService.getMangaFilters();
+      
+      _isLoading = false;
+      notifyListeners();
+    } catch (e) {
+      print('Load tags error: $e');
+      _error = 'Taglarni yuklashda xatolik: $e';
+      _isLoading = false;
+      notifyListeners();
+    }
   }
 
   void addTag(String tagSlug) {

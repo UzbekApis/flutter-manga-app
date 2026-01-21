@@ -11,6 +11,7 @@ class ReaderScreen extends StatefulWidget {
   final String chapterSlug;
   final String chapterNumber;
   final int initialPage;
+  final double? initialScrollOffset;
   final String? mangaId;
   final String? mangaSlug;
   final String? mangaName;
@@ -22,6 +23,7 @@ class ReaderScreen extends StatefulWidget {
     required this.chapterSlug,
     required this.chapterNumber,
     this.initialPage = 0,
+    this.initialScrollOffset,
     this.mangaId,
     this.mangaSlug,
     this.mangaName,
@@ -85,6 +87,9 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
   Future<void> _saveProgress() async {
     if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
+      // Aniq scroll pozitsiyasini saqlash
+      final scrollOffset = _scrollController.hasClients ? _scrollController.offset : 0.0;
+      
       await context.read<MangaProvider>().updateReadingProgress(
         widget.mangaId!,
         widget.mangaSlug!,
@@ -94,7 +99,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
         widget.chapterNumber,
         _currentPage,
         widget.totalChapters ?? 0,
+        scrollOffset: scrollOffset,
       );
+      
+      print('Saved progress: page $_currentPage, offset $scrollOffset');
     }
   }
 
@@ -111,17 +119,22 @@ class _ReaderScreenState extends State<ReaderScreen> {
       
       print('Loaded ${offlineImages.length} offline images');
       
-      // Boshlang'ich sahifaga o'tish
-      if (widget.initialPage > 0 && widget.initialPage < offlineImages.length) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (_scrollController.hasClients) {
+      // Aniq scroll pozitsiyasiga o'tish
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (_scrollController.hasClients) {
+          if (widget.initialScrollOffset != null && widget.initialScrollOffset! > 0) {
+            // Aniq pixel pozitsiyasiga o'tish
+            _scrollController.jumpTo(widget.initialScrollOffset!);
+            print('Jumped to exact offset: ${widget.initialScrollOffset}');
+          } else if (widget.initialPage > 0 && widget.initialPage < offlineImages.length) {
+            // Sahifa raqami bo'yicha o'tish
             final screenHeight = MediaQuery.of(context).size.height;
             final targetOffset = widget.initialPage * screenHeight;
             _scrollController.jumpTo(targetOffset);
             print('Jumped to page ${widget.initialPage} at offset $targetOffset');
           }
-        });
-      }
+        }
+      });
       return;
     }
 
@@ -136,17 +149,22 @@ class _ReaderScreenState extends State<ReaderScreen> {
       
       print('Loaded ${chapter.imageUrls.length} online images');
       
-      // Boshlang'ich sahifaga o'tish
-      if (widget.initialPage > 0 && widget.initialPage < chapter.imageUrls.length) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (_scrollController.hasClients) {
+      // Aniq scroll pozitsiyasiga o'tish
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (_scrollController.hasClients) {
+          if (widget.initialScrollOffset != null && widget.initialScrollOffset! > 0) {
+            // Aniq pixel pozitsiyasiga o'tish
+            _scrollController.jumpTo(widget.initialScrollOffset!);
+            print('Jumped to exact offset: ${widget.initialScrollOffset}');
+          } else if (widget.initialPage > 0 && widget.initialPage < chapter.imageUrls.length) {
+            // Sahifa raqami bo'yicha o'tish
             final screenHeight = MediaQuery.of(context).size.height;
             final targetOffset = widget.initialPage * screenHeight;
             _scrollController.jumpTo(targetOffset);
             print('Jumped to page ${widget.initialPage} at offset $targetOffset');
           }
-        });
-      }
+        }
+      });
     }
   }
 

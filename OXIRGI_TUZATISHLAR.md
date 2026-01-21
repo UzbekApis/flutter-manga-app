@@ -3,10 +3,11 @@
 ## Amalga Oshirilgan O'zgarishlar
 
 ### 1. Tag Bo'yicha Qidirish - Tuzatildi ✓
-**Muammo:** Tag qidirish bo'limiga kirish ishlamayotgan edi
+**Muammo:** Tag qidirish bo'limiga kirganda loading animatsiya qolib ketardi
 **Yechim:** 
-- `Navigator.push` da `builder: (_)` o'rniga `builder: (context)` ishlatildi
-- Context to'g'ri uzatilishi ta'minlandi
+- `loadAllTags()` funksiyasiga try-catch va error handling qo'shildi
+- Loading state to'g'ri boshqariladi
+- Xatolik yuz berganda foydalanuvchiga xabar ko'rsatiladi
 
 ### 2. Background Download - Tuzatildi ✓
 **Muammo:** Chapter yuklab olishda progress bar ekranni to'sib qo'yardi
@@ -28,13 +29,16 @@
 - Mangaga bosganda alohida ekranda chapterlar ro'yxati ochiladi
 - Yangi `DownloadedChaptersScreen` yaratildi
 
-### 4. O'qish Pozitsiyasini Eslab Qolish - Yaxshilandi ✓
-**Muammo:** Har doim eng yuqoridan boshlanardi
+### 4. O'qish Pozitsiyasini Aniq Eslab Qolish - To'liq Tuzatildi ✓✓
+**Muammo:** Har doim sahifaning eng pastidan boshlanardi, aniq pozitsiya saqlanmasdi
 **Yechim:**
-- Scroll pozitsiyasi aniqroq kuzatiladi
-- Viewport markazidagi sahifa aniqlanadi
-- `initialPage` parametri to'g'ri ishlatiladi
-- Davom ettirganda aynan to'xtagan joydan boshlanadi
+- Database'ga `scrollOffset` ustuni qo'shildi (REAL type)
+- Database version 1 → 2 ga ko'tarildi
+- `onUpgrade` migration qo'shildi
+- Reader'da aniq pixel pozitsiyasi saqlanadi
+- `initialScrollOffset` parametri qo'shildi
+- Davom ettirganda aynan to'xtagan joydan (pixel aniqligida) boshlanadi
+- Reading List'dan to'g'ridan-to'g'ri reader'ga o'tish qo'shildi
 
 ### 5. Offline Rasmlar - Tuzatildi ✓
 **Muammo:** 17 ta rasmdan faqat 9 tasi ko'rinardi
@@ -45,45 +49,59 @@
 
 ## Texnik Tafsilotlar
 
-### Downloads Screen Arxitekturasi
-```
-DownloadsScreen (Grid)
-  └─> Manga Card (bosilganda)
-       └─> DownloadedChaptersScreen (List)
-            └─> Chapter Item (bosilganda)
-                 └─> ReaderScreen
+### Database Schema v2
+```sql
+CREATE TABLE reading (
+  id TEXT PRIMARY KEY,
+  slug TEXT NOT NULL,
+  name TEXT NOT NULL,
+  coverUrl TEXT,
+  lastChapterSlug TEXT,
+  lastChapterNumber TEXT,
+  lastPageIndex INTEGER DEFAULT 0,
+  scrollOffset REAL DEFAULT 0.0,  -- YANGI!
+  lastReadAt INTEGER NOT NULL,
+  totalChapters INTEGER DEFAULT 0
+)
 ```
 
-### Reader Screen Scroll Mexanizmi
-- Viewport markazidagi sahifa aniqlanadi
-- Har scroll harakatida pozitsiya saqlanadi
-- Ekrandan chiqishda oxirgi pozitsiya database'ga yoziladi
-- Qayta kirishda shu pozitsiyadan davom etadi
-
-### Offline Rasmlar Saralash
+### Scroll Pozitsiyasi Saqlash
 ```dart
-images.sort((a, b) {
-  final aNum = int.tryParse(a.split('page_').last.split('.').first) ?? 0;
-  final bNum = int.tryParse(b.split('page_').last.split('.').first) ?? 0;
-  return aNum.compareTo(bNum);
-});
+// Saqlash
+final scrollOffset = _scrollController.offset;
+await updateReadingProgress(..., scrollOffset: scrollOffset);
+
+// Yuklash
+if (initialScrollOffset != null && initialScrollOffset > 0) {
+  _scrollController.jumpTo(initialScrollOffset);
+}
 ```
+
+### Reading List Yaxshilanishi
+- Endi to'g'ridan-to'g'ri reader'ga o'tish mumkin
+- Play tugmasi ko'rsatiladi
+- Aniq scroll pozitsiyasi uzatiladi
 
 ## Test Qilish Kerak
 
-1. ✓ Tag qidirish tugmasini bosing
+1. ✓ Tag qidirish tugmasini bosing - taglar yuklanishi kerak
 2. ✓ Chapter yuklab oling (progress bar ko'rinmasligi kerak)
 3. ✓ Downloads'ga kiring - faqat manga kartochkalari ko'rinishi kerak
 4. ✓ Mangaga bosing - chapterlar ro'yxati ochilishi kerak
-5. ✓ Chapterni oching va o'rtasigacha scroll qiling
-6. ✓ Orqaga qaytib, qayta oching - o'sha joydan davom etishi kerak
-7. ✓ Barcha rasmlar to'g'ri tartibda ko'rinishi kerak
+5. ✓ Chapterni oching va rasmning o'rtasiga scroll qiling
+6. ✓ Orqaga qaytib, "O'qiyotganlar"dan davom eting
+7. ✓ Aynan o'sha pixel pozitsiyasidan davom etishi kerak
+8. ✓ Barcha rasmlar to'g'ri tartibda ko'rinishi kerak
 
 ## Fayl O'zgarishlari
 
+- `lib/services/database_service.dart` - scrollOffset ustuni, migration
+- `lib/providers/manga_provider.dart` - scrollOffset parametri, tag loading error handling
+- `lib/screens/reader_screen.dart` - initialScrollOffset, aniq pozitsiya saqlash
+- `lib/screens/reading_list_screen.dart` - to'g'ridan-to'g'ri reader'ga o'tish
 - `lib/screens/home_screen.dart` - Tag navigation tuzatildi
 - `lib/screens/downloads_screen.dart` - To'liq qayta yozildi (grid + yangi ekran)
-- `lib/screens/reader_screen.dart` - Background download + yaxshi scroll tracking
 - `lib/services/download_service.dart` - Rasmlarni to'g'ri saralash
 
-Barcha o'zgarishlar amalga oshirildi va xatosiz kompilyatsiya qilindi! ✓
+Barcha o'zgarishlar amalga oshirildi va xatosiz kompilyatsiya qilindi! ✓✓
+

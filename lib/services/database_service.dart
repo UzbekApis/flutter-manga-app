@@ -16,7 +16,7 @@ class DatabaseService {
 
     return await openDatabase(
       path,
-      version: 1,
+      version: 2, // Version oshirildi
       onCreate: (db, version) async {
         // Sevimlilar
         await db.execute('''
@@ -39,6 +39,7 @@ class DatabaseService {
             lastChapterSlug TEXT,
             lastChapterNumber TEXT,
             lastPageIndex INTEGER DEFAULT 0,
+            scrollOffset REAL DEFAULT 0.0,
             lastReadAt INTEGER NOT NULL,
             totalChapters INTEGER DEFAULT 0
           )
@@ -70,6 +71,12 @@ class DatabaseService {
             lastCheckedAt INTEGER NOT NULL
           )
         ''');
+      },
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 2) {
+          // scrollOffset ustunini qo'shish
+          await db.execute('ALTER TABLE reading ADD COLUMN scrollOffset REAL DEFAULT 0.0');
+        }
       },
     );
   }
@@ -115,8 +122,9 @@ class DatabaseService {
     String chapterSlug,
     String chapterNumber,
     int pageIndex,
-    int totalChapters,
-  ) async {
+    int totalChapters, {
+    double? scrollOffset,
+  }) async {
     final db = await database;
     await db.insert(
       'reading',
@@ -128,6 +136,7 @@ class DatabaseService {
         'lastChapterSlug': chapterSlug,
         'lastChapterNumber': chapterNumber,
         'lastPageIndex': pageIndex,
+        'scrollOffset': scrollOffset ?? 0.0,
         'lastReadAt': DateTime.now().millisecondsSinceEpoch,
         'totalChapters': totalChapters,
       },
