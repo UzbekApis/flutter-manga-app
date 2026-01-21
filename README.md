@@ -14,8 +14,9 @@ Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
 - 💾 **Offline o'qish** - Chapterlarni yuklab olish
 - 📜 **Vertikal scroll** - Pastdan yuqoriga o'qish
 - 🖼️ **Auto-fit** - Rasmlar ekranga moslashadi
-- ⚡ **Cache** - Tez yuklash uchun
+- ⚡ **Cache** - Tez yuklash uchun (CachedNetworkImage)
 - 🌙 **Dark mode** - Qorong'i tema
+- 🛡️ **Xatoliklar** - Yaxshilangan xatoliklar bilan ishlash
 
 ## 📸 Screenshots
 
@@ -27,25 +28,15 @@ Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
 
 ## 🚀 Google Colab'da Build qilish (TAVSIYA ETILADI)
 
-### ⚡ Eng oson usul - Jupyter Notebook:
+Eng ishonchli va oson usul bu **Google Colab** yordamida build qilishdir.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb)
+👉 **[COLAB_FINAL.md](COLAB_FINAL.md)** faylida to'liq va yangilangan yo'riqnoma mavjud.
 
-1. Yuqoridagi tugmani bosing
-2. Runtime → Run all
-3. 20 daqiqa kuting ☕
-4. APK yuklab olindi! 🎉
-
-### 📝 Yoki qo'lda:
-
-Har bir cell'ni ketma-ket ishga tushiring:
-1. System packages
-2. Flutter
-3. Android SDK
-4. Loyiha yuklash
-5. Dependencies
-6. Build APK
-7. Yuklab olish
+### Qisqacha:
+1. [Google Colab](https://colab.research.google.com/) oching
+2. [COLAB_FINAL.md](COLAB_FINAL.md) dagi kodni nusxalang
+3. Ishga tushiring va 20 daqiqa kuting
+4. APK tayyor!
 
 ## 💻 Lokal Build
 
@@ -132,11 +123,6 @@ Ilova to'g'ridan-to'g'ri Senkuro GraphQL API bilan ishlaydi:
 - Internet ulanishini tekshiring
 - Cache'ni tozalang
 
-### Colab'da build xatolik
-- Runtime → Restart runtime
-- Barcha cell'larni qaytadan ishga tushiring
-- [Jupyter Notebook](Flutter_Manga_App_Builder.ipynb) ichida diagnostika cell'i bor
-
 ## 🤝 Hissa qo'shish
 
 Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
@@ -162,23 +148,6 @@ Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
 - [Flutter](https://flutter.dev) - Framework
 - Barcha contributors'larga
 
-## ⭐ Star History
-
-Agar loyiha yoqsa, star bering! ⭐
-
-## 📚 Qo'shimcha
-
-- **Jupyter Notebook**: [Flutter_Manga_App_Builder.ipynb](Flutter_Manga_App_Builder.ipynb)
-- **Colab yo'riqnomalar**: 
-  - [COLAB_STEP_BY_STEP.md](COLAB_STEP_BY_STEP.md)
-  - [COLAB_WORKING.md](COLAB_WORKING.md)
-  - [COLAB_FIXED.md](COLAB_FIXED.md)
-
 ---
 
 <p align="center">Made with ❤️ by UzbekApis</p>
-<p align="center">
-  <a href="https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-  </a>
-</p>

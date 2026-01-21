@@ -3,8 +3,16 @@ import 'package:http/http.dart' as http;
 import '../models/manga.dart';
 import '../models/chapter.dart';
 
+class ApiException implements Exception {
+  final String message;
+  ApiException(this.message);
+  @override
+  String toString() => message;
+}
+
 class ApiService {
   static const String baseUrl = 'https://api.senkuro.me/graphql';
+  static const Duration timeout = Duration(seconds: 15);
   
   static final Map<String, String> headers = {
     'accept': 'application/graphql-response+json',
@@ -13,6 +21,28 @@ class ApiService {
     'referer': 'https://senkuro.me/',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
   };
+
+  static Future<dynamic> _post(Map<String, dynamic> payload) async {
+    try {
+      final response = await http.post(
+        Uri.parse(baseUrl),
+        headers: headers,
+        body: jsonEncode(payload),
+      ).timeout(timeout);
+
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+        if (data['errors'] != null) {
+          throw ApiException((data['errors'] as List).first['message'] ?? 'Unknown API error');
+        }
+        return data;
+      } else {
+        throw ApiException('Server error: ${response.statusCode}');
+      }
+    } catch (e) {
+      throw ApiException(e.toString());
+    }
+  }
 
   // Manga qidirish
   static Future<List<Manga>> searchManga(String query) async {
@@ -28,21 +58,13 @@ class ApiService {
     };
 
     try {
-      final response = await http.post(
-        Uri.parse(baseUrl),
-        headers: headers,
-        body: jsonEncode(payload),
-      );
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        final edges = data['data']['search']['edges'] as List;
-        return edges.map((e) => Manga.fromJson(e['node'])).toList();
-      }
+      final data = await _post(payload);
+      final edges = data['data']['search']['edges'] as List;
+      return edges.map((e) => Manga.fromJson(e['node'])).toList();
     } catch (e) {
       print('Search error: $e');
+      rethrow;
     }
-    return [];
   }
 
   // Manga ma'lumotlari
@@ -59,20 +81,12 @@ class ApiService {
     };
 
     try {
-      final response = await http.post(
-        Uri.parse(baseUrl),
-        headers: headers,
-        body: jsonEncode(payload),
-      );
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        return MangaDetail.fromJson(data['data']['manga']);
-      }
+      final data = await _post(payload);
+      return MangaDetail.fromJson(data['data']['manga']);
     } catch (e) {
       print('Detail error: $e');
+      return null;
     }
-    return null;
   }
 
   // Chapterlar ro'yxati
@@ -94,21 +108,13 @@ class ApiService {
     };
 
     try {
-      final response = await http.post(
-        Uri.parse(baseUrl),
-        headers: headers,
-        body: jsonEncode(payload),
-      );
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        final edges = data['data']['mangaChapters']['edges'] as List;
-        return edges.map((e) => ChapterItem.fromJson(e['node'])).toList();
-      }
+      final data = await _post(payload);
+      final edges = data['data']['mangaChapters']['edges'] as List;
+      return edges.map((e) => ChapterItem.fromJson(e['node'])).toList();
     } catch (e) {
       print('Chapters error: $e');
+      return [];
     }
-    return [];
   }
 
   // Chapter rasmlar
@@ -125,19 +131,11 @@ class ApiService {
     };
 
     try {
-      final response = await http.post(
-        Uri.parse(baseUrl),
-        headers: headers,
-        body: jsonEncode(payload),
-      );
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        return ChapterDetail.fromJson(data['data']['mangaChapter']);
-      }
+      final data = await _post(payload);
+      return ChapterDetail.fromJson(data['data']['mangaChapter']);
     } catch (e) {
       print('Chapter images error: $e');
+      return null;
     }
-    return null;
   }
 }
