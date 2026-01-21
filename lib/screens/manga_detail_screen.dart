@@ -348,10 +348,10 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
                         ],
                         onSelected: (value) {
                           if (value == 'download_all') {
+                            // Barcha chapterlarni tanlash
+                            final allIndices = List.generate(_chapters.length, (i) => i);
                             setState(() {
-                              _selectedChapters = Set.from(
-                                List.generate(_chapters.length, (i) => i),
-                              );
+                              _selectedChapters = Set.from(allIndices);
                             });
                             _downloadMultipleChapters();
                           } else if (value == 'select_chapters') {

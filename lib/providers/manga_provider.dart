@@ -14,6 +14,15 @@ class MangaProvider extends ChangeNotifier {
   List<Map<String, dynamic>> _readingList = [];
   Map<String, List<Map<String, dynamic>>> _downloads = {};
   List<Map<String, dynamic>> _newChaptersNotifications = [];
+  
+  // Yangi: Rekomendatsiyalar va taglar
+  List<Manga> _recommendations = [];
+  List<Manga> _popularWeekly = [];
+  List<Manga> _popularMonthly = [];
+  List<Map<String, dynamic>> _allTags = [];
+  List<String> _selectedTags = [];
+  List<String> _excludedTags = [];
+  List<Manga> _tagFilteredMangas = [];
 
   List<Manga> get searchResults => _searchResults;
   bool get isLoading => _isLoading;
@@ -22,6 +31,14 @@ class MangaProvider extends ChangeNotifier {
   List<Map<String, dynamic>> get readingList => _readingList;
   Map<String, List<Map<String, dynamic>>> get downloads => _downloads;
   List<Map<String, dynamic>> get newChaptersNotifications => _newChaptersNotifications;
+  
+  List<Manga> get recommendations => _recommendations;
+  List<Manga> get popularWeekly => _popularWeekly;
+  List<Manga> get popularMonthly => _popularMonthly;
+  List<Map<String, dynamic>> get allTags => _allTags;
+  List<String> get selectedTags => _selectedTags;
+  List<String> get excludedTags => _excludedTags;
+  List<Manga> get tagFilteredMangas => _tagFilteredMangas;
 
   Future<void> searchManga(String query) async {
     _isLoading = true;
@@ -168,5 +185,94 @@ class MangaProvider extends ChangeNotifier {
   void clearNewChaptersNotifications() {
     _newChaptersNotifications.clear();
     notifyListeners();
+  }
+
+  // REKOMENDATSIYALAR VA TAGLAR
+  Future<void> loadRecommendations() async {
+    try {
+      final mainPage = await ApiService.getMainPage();
+      if (mainPage['mangaSpotlight'] != null) {
+        final spotlight = mainPage['mangaSpotlight'] as List;
+        _recommendations = spotlight.map((m) => Manga.fromJson(m)).toList();
+      }
+      notifyListeners();
+    } catch (e) {
+      print('Recommendations error: $e');
+    }
+  }
+
+  Future<void> loadPopularWeekly() async {
+    _popularWeekly = await ApiService.getPopularManga(period: 'WEEK');
+    notifyListeners();
+  }
+
+  Future<void> loadPopularMonthly() async {
+    _popularMonthly = await ApiService.getPopularManga(period: 'MONTH');
+    notifyListeners();
+  }
+
+  Future<void> loadAllTags() async {
+    _allTags = await ApiService.getMangaFilters();
+    notifyListeners();
+  }
+
+  void addTag(String tagSlug) {
+    if (!_selectedTags.contains(tagSlug)) {
+      _selectedTags.add(tagSlug);
+      _fetchByTags();
+    }
+  }
+
+  void removeTag(String tagSlug) {
+    _selectedTags.remove(tagSlug);
+    if (_selectedTags.isEmpty) {
+      _tagFilteredMangas.clear();
+    } else {
+      _fetchByTags();
+    }
+    notifyListeners();
+  }
+
+  void addExcludeTag(String tagSlug) {
+    if (!_excludedTags.contains(tagSlug)) {
+      _excludedTags.add(tagSlug);
+      if (_selectedTags.isNotEmpty) {
+        _fetchByTags();
+      }
+    }
+  }
+
+  void removeExcludeTag(String tagSlug) {
+    _excludedTags.remove(tagSlug);
+    if (_selectedTags.isNotEmpty) {
+      _fetchByTags();
+    }
+    notifyListeners();
+  }
+
+  void clearTags() {
+    _selectedTags.clear();
+    _excludedTags.clear();
+    _tagFilteredMangas.clear();
+    notifyListeners();
+  }
+
+  Future<void> _fetchByTags() async {
+    if (_selectedTags.isEmpty) return;
+    
+    _isLoading = true;
+    notifyListeners();
+
+    _tagFilteredMangas = await ApiService.fetchMangasByTags(
+      includeTags: _selectedTags,
+      excludeTags: _excludedTags,
+    );
+
+    _isLoading = false;
+    notifyListeners();
+  }
+
+  Future<void> fetchByTags() async {
+    await _fetchByTags();
   }
 }

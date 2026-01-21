@@ -27,20 +27,28 @@ class Manga {
       }
     }
 
-    // Inglizcha nomni olish (ruscha emas)
+    // Inglizcha nomni olish, agar bo'lmasa original nom
     String name = json['originalName'] ?? 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
       // Avval inglizcha qidirish
+      String? enName;
       for (var title in titles) {
         if (title['lang'] == 'EN') {
-          name = title['content'];
+          enName = title['content'];
           break;
         }
       }
-      // Agar inglizcha bo'lmasa, original nomni olish
-      if (name == json['originalName'] && titles.isNotEmpty) {
-        name = titles.first['content'] ?? name;
+      
+      // Agar inglizcha topilsa, uni ishlatamiz
+      if (enName != null && enName.isNotEmpty) {
+        name = enName;
+      } else if (titles.isNotEmpty) {
+        // Agar inglizcha bo'lmasa, birinchi mavjud nomni olish
+        final firstTitle = titles.first['content'];
+        if (firstTitle != null && firstTitle.toString().isNotEmpty) {
+          name = firstTitle.toString();
+        }
       }
     }
 
@@ -81,19 +89,27 @@ class MangaDetail {
       coverUrl = json['cover']['original']['url'];
     }
 
-    // Inglizcha nomni olish
+    // Inglizcha nomni olish, agar bo'lmasa original nom
     String name = json['originalName']?['content'] ?? 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
+      String? enName;
       for (var title in titles) {
         if (title['lang'] == 'EN') {
-          name = title['content'];
+          enName = title['content'];
           break;
         }
       }
-      // Agar inglizcha bo'lmasa, original nomni olish
-      if (name == json['originalName']?['content'] && titles.isNotEmpty) {
-        name = titles.first['content'] ?? name;
+      
+      // Agar inglizcha topilsa, uni ishlatamiz
+      if (enName != null && enName.isNotEmpty) {
+        name = enName;
+      } else if (titles.isNotEmpty) {
+        // Agar inglizcha bo'lmasa, birinchi mavjud nomni olish
+        final firstTitle = titles.first['content'];
+        if (firstTitle != null && firstTitle.toString().isNotEmpty) {
+          name = firstTitle.toString();
+        }
       }
     }
 
