@@ -468,6 +468,7 @@ class _TagFilterScreenState extends State<TagFilterScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      print('TagFilterScreen: Loading tags...');
       context.read<MangaProvider>().loadAllTags();
     });
   }
@@ -499,8 +500,63 @@ class _TagFilterScreenState extends State<TagFilterScreen> {
       ),
       body: Consumer<MangaProvider>(
         builder: (context, provider, child) {
+          print('TagFilterScreen: isLoading=${provider.isLoading}, tags=${provider.allTags.length}, error=${provider.error}');
+          
+          if (provider.isLoading && provider.allTags.isEmpty) {
+            return const Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 16),
+                  Text('Taglar yuklanmoqda...'),
+                ],
+              ),
+            );
+          }
+
+          if (provider.error != null) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.error_outline, size: 64, color: Colors.red),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Xatolik: ${provider.error}',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: Colors.red),
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                      provider.loadAllTags();
+                    },
+                    child: const Text('Qayta urinish'),
+                  ),
+                ],
+              ),
+            );
+          }
+
           if (provider.allTags.isEmpty) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.label_off, size: 64, color: Colors.grey),
+                  const SizedBox(height: 16),
+                  const Text('Taglar topilmadi'),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                      provider.loadAllTags();
+                    },
+                    child: const Text('Qayta yuklash'),
+                  ),
+                ],
+              ),
+            );
           }
 
           return Column(

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -41,69 +42,58 @@ class _ReaderScreenState extends State<ReaderScreen> {
   bool _isLoading = true;
   bool _isOffline = false;
   bool _isDownloading = false;
-  double _downloadProgress = 0;
-  int _currentPage = 0;
 
   final ScrollController _scrollController = ScrollController();
+  
+  // Scroll pozitsiyasini saqlash uchun timer
+  Timer? _saveTimer;
 
   @override
   void initState() {
     super.initState();
-    _currentPage = widget.initialPage;
     _loadChapter();
     _scrollController.addListener(_onScroll);
   }
 
   void _onScroll() {
-    if (_images.isEmpty) return;
+    if (_images.isEmpty || !_scrollController.hasClients) return;
     
-    // Hozirgi sahifani aniqlash - viewport markazidagi rasm
-    final screenHeight = MediaQuery.of(context).size.height;
-    final scrollPosition = _scrollController.offset;
+    // Hozirgi scroll pozitsiyasini saqlash (debounce bilan)
+    final scrollOffset = _scrollController.offset;
     
-    // Viewport markazidagi sahifani topish
-    final viewportCenter = scrollPosition + (screenHeight / 2);
-    int newPage = 0;
-    
-    // Har bir rasmning pozitsiyasini hisoblash
-    double currentOffset = 0;
-    for (int i = 0; i < _images.length; i++) {
-      // Har bir rasm taxminan ekran balandligida
-      final imageHeight = screenHeight;
-      if (viewportCenter >= currentOffset && viewportCenter < currentOffset + imageHeight) {
-        newPage = i;
-        break;
-      }
-      currentOffset += imageHeight;
-    }
-    
-    if (newPage != _currentPage && newPage >= 0 && newPage < _images.length) {
-      setState(() {
-        _currentPage = newPage;
-      });
-      _saveProgress();
-    }
+    // Sahifa raqamini aniqlash uchun har bir rasmning balandligini bilish kerak
+    // Lekin biz faqat scroll pozitsiyasini saqlaymiz, sahifa raqami emas
+    _saveProgress();
   }
 
   Future<void> _saveProgress() async {
-    if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
-      // Aniq scroll pozitsiyasini saqlash
-      final scrollOffset = _scrollController.hasClients ? _scrollController.offset : 0.0;
-      
-      await context.read<MangaProvider>().updateReadingProgress(
-        widget.mangaId!,
-        widget.mangaSlug!,
-        widget.mangaName!,
-        widget.mangaCoverUrl,
-        widget.chapterSlug,
-        widget.chapterNumber,
-        _currentPage,
-        widget.totalChapters ?? 0,
-        scrollOffset: scrollOffset,
-      );
-      
-      print('Saved progress: page $_currentPage, offset $scrollOffset');
-    }
+    // Timer bilan debounce - har 2 soniyada bir marta saqlash
+    _saveTimer?.cancel();
+    _saveTimer = Timer(const Duration(seconds: 2), () async {
+      if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
+        if (_scrollController.hasClients) {
+          final scrollOffset = _scrollController.offset;
+          
+          // Hozirgi sahifani taxminiy hisoblash (faqat ko'rsatish uchun)
+          final screenHeight = MediaQuery.of(context).size.height;
+          final currentPage = (scrollOffset / screenHeight).floor();
+          
+          await context.read<MangaProvider>().updateReadingProgress(
+            widget.mangaId!,
+            widget.mangaSlug!,
+            widget.mangaName!,
+            widget.mangaCoverUrl,
+            widget.chapterSlug,
+            widget.chapterNumber,
+            currentPage,
+            widget.totalChapters ?? 0,
+            scrollOffset: scrollOffset,
+          );
+          
+          print('Saved: offset=$scrollOffset, page=$currentPage/${_images.length}');
+        }
+      }
+    });
   }
 
   Future<void> _loadChapter() async {
@@ -232,12 +222,16 @@ class _ReaderScreenState extends State<ReaderScreen> {
       appBar: AppBar(
         title: Text('Chapter ${widget.chapterNumber}'),
         actions: [
-          if (_images.isNotEmpty)
+          if (_images.isNotEmpty && _scrollController.hasClients)
             Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  '${_currentPage + 1}/${_images.length}',
+                  () {
+                    final screenHeight = MediaQuery.of(context).size.height;
+                    final currentPage = (_scrollController.offset / screenHeight).floor() + 1;
+                    return '$currentPage/${_images.length}';
+                  }(),
                   style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -333,7 +327,27 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
   @override
   void dispose() {
-    _saveProgress();
+    _saveTimer?.cancel();
+    // Oxirgi marta saqlash
+    if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
+      if (_scrollController.hasClients) {
+        final scrollOffset = _scrollController.offset;
+        final screenHeight = MediaQuery.of(context).size.height;
+        final currentPage = (scrollOffset / screenHeight).floor();
+        
+        context.read<MangaProvider>().updateReadingProgress(
+          widget.mangaId!,
+          widget.mangaSlug!,
+          widget.mangaName!,
+          widget.mangaCoverUrl,
+          widget.chapterSlug,
+          widget.chapterNumber,
+          currentPage,
+          widget.totalChapters ?? 0,
+          scrollOffset: scrollOffset,
+        );
+      }
+    }
     _scrollController.dispose();
     super.dispose();
   }
