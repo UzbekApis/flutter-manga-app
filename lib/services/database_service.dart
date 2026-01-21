@@ -52,7 +52,7 @@ class DatabaseService {
             mangaSlug TEXT NOT NULL,
             mangaName TEXT NOT NULL,
             mangaCoverUrl TEXT,
-            chapterSlug TEXT NOT NULL,
+            chapterSlug TEXT NOT NULL UNIQUE,
             chapterNumber TEXT NOT NULL,
             chapterName TEXT,
             downloadedAt INTEGER NOT NULL,

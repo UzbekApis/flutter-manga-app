@@ -1,0 +1,3122 @@
+{
+  "data": {
+    "ad": {
+      "id": "funpay-2026-01-19",
+      "link": "https://senku.cc/CKU6G5",
+      "media": {
+        "blurhash": "TfF#|-IikNWJbCofD-oHjdkEt3WF",
+        "url": "https://mirai.senkuro.net/system/ads/funpay-2025-11-27.png",
+        "__typename": "AdMediaImage"
+      },
+      "__typename": "Ad"
+    },
+    "experimentalSpotlightLabels": [
+      {
+        "id": "725",
+        "label": {
+          "id": "TEFCRUw6NzI1",
+          "slug": "system",
+          "titles": [
+            {
+              "lang": "RU",
+              "content": "Система",
+              "__typename": "I18nTitle"
+            },
+            {
+              "lang": "EN",
+              "content": "System",
+              "__typename": "I18nTitle"
+            }
+          ],
+          "gender": null,
+          "__typename": "Label"
+        },
+        "previewMangas": [
+          {
+            "id": "TUFOR0E6NjI0MzgwNjk0MTU5OTM3ODg",
+            "slug": "zui-qiang-boss-xitong",
+            "originalName": {
+              "lang": "ZH",
+              "content": "Zui qiang BOSS Xitong",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Система сильнейшего злодея",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "SENSITIVE",
+            "score": 8.100000381469727,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NjI0MzgxMDYyNTg3NjAxMjQ",
+              "blurhash": "TRH1Y[IpxG~BWCWBjcR*EL57s:XR",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/62438069415993788/covers/788f1216ae5f62da97ae2dc6ee38905860fc76fe_62438106258760124.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/eC5XzxJtnBwEE9Oq9V-HdFHYB9nhYcixcx_EWeKPukg/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS82MjQzODA2OTQxNTk5Mzc4OC9jb3ZlcnMvNzg4ZjEyMTZhZTVmNjJkYTk3YWUyZGM2ZWUzODkwNTg2MGZjNzZmZV82MjQzODEwNjI1ODc2MDEyNC5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTM4NzgzOTE5NzYyODUxMzQ4",
+            "slug": "lucky-me-i-secretly-cultivated-for-1-000-years",
+            "originalName": {
+              "lang": "JA",
+              "content": "Lucky Me: I Secretly Cultivated for 1,000 Years",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Высшая удача, спокойно культивируемая в течение тысяч лет",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.829999923706055,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTM4NzgzOTU5MTA1NDIyODk0",
+              "blurhash": "TVIXzJ9nIm02xnxo-?b3xsWGogt7",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/138783919762851348/covers/e9e15381799753850119a8390582540670c535b2_138783959105422894.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/cOex53enx8PjqPZ5VAsvYK9MlrVr_bT2mxH-n8ljiEM/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMzg3ODM5MTk3NjI4NTEzNDgvY292ZXJzL2U5ZTE1MzgxNzk5NzUzODUwMTE5YTgzOTA1ODI1NDA2NzBjNTM1YjJfMTM4NzgzOTU5MTA1NDIyODk0LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTQ1NDUxMDM3ODEyMDgyMTg4",
+            "slug": "all-my-alter-egos-are-tycoons",
+            "originalName": {
+              "lang": "JA",
+              "content": "All My Alter Egos Are Tycoons",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Мои альтер эго получили огромное влияние",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "내 분신이 거물이 되어간다",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 9.229999542236328,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTQ1NDUxMDYxODM3MDU1NTQx",
+              "blurhash": "TSEg5rNZDlcHoyxb8^t6xs,kjFS#",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/145451037812082188/covers/7560ecd68389ce1b6eb230b450b820da9ee8557d_145451061837055541.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/Ru77C1ovNLT90pJ_c6xDgyTLJnEOIiXTmCGJz6iL5_U/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNDU0NTEwMzc4MTIwODIxODgvY292ZXJzLzc1NjBlY2Q2ODM4OWNlMWI2ZWIyMzBiNDUwYjgyMGRhOWVlODU1N2RfMTQ1NDUxMDYxODM3MDU1NTQxLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          }
+        ],
+        "__typename": "ExperimentalSpotlightLabel"
+      },
+      {
+        "id": "746",
+        "label": {
+          "id": "TEFCRUw6NzQ2",
+          "slug": "romance",
+          "titles": [
+            {
+              "lang": "RU",
+              "content": "Романтика",
+              "__typename": "I18nTitle"
+            },
+            {
+              "lang": "EN",
+              "content": "Romance",
+              "__typename": "I18nTitle"
+            }
+          ],
+          "gender": null,
+          "__typename": "Label"
+        },
+        "previewMangas": [
+          {
+            "id": "TUFOR0E6NDA3MDY3NDU2MjYwMjY0MDY",
+            "slug": "ane-mone-seikaten",
+            "originalName": {
+              "lang": "JA",
+              "content": "Ane-Mone Seikaten",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Цветочный магазин «Анэ-Монэ»",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "アネ☆モネ生花店 ~南マキ傑作短編集~",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [
+              "DIGEST"
+            ],
+            "rating": "SENSITIVE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NDkyMTMwMTU4MzIxNTg2MTE",
+              "blurhash": "TQN^M9%M_M?ut9s,_2oz9GIAk8o{",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/40706745626026406/covers/c43a79a693c54c7c2b789309ed9f96863e3baafc_49213015832158611.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/a9CIiJl0DFIm7P7rXs59oPFDuKpqtc8qBVDnQn77pxo/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80MDcwNjc0NTYyNjAyNjQwNi9jb3ZlcnMvYzQzYTc5YTY5M2M1NGM3YzJiNzg5MzA5ZWQ5Zjk2ODYzZTNiYWFmY180OTIxMzAxNTgzMjE1ODYxMS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6NDA3MTMxMTQ2MjYzMTg3NTg",
+            "slug": "kanshakudama-no-yuuutsu",
+            "originalName": {
+              "lang": "JA",
+              "content": "Kanshakudama no Yuuutsu",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Short-Tempered Melancholic and Other Stories",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Мимолётная вспышка чувств",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "かんしゃく玉のゆううつ",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [
+              "DIGEST"
+            ],
+            "rating": "SENSITIVE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NDkyMjk3MjM2NzQzNzA0NTE",
+              "blurhash": "TVRU:Qs.*0*0V@RO%ibcbXRnn,sn",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/40713114626318758/covers/97300ea0ac96a871148d14c98522983b16417c6b_49229723674370451.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/H762s_rESg3vRfobUFUMXggLn3ISFRRLCNQC5sKiPLA/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80MDcxMzExNDYyNjMxODc1OC9jb3ZlcnMvOTczMDBlYTBhYzk2YTg3MTE0OGQxNGM5ODUyMjk4M2IxNjQxN2M2Yl80OTIyOTcyMzY3NDM3MDQ1MS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTM3MjM5MDk5MDQ3MTY3NTAw",
+            "slug": "sawaranaide-kotesashi-kun",
+            "originalName": {
+              "lang": "JA",
+              "content": "Sawaranaide Kotesashi-kun",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Don't Touch Kotesashi",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Не трогай меня, Котэсаси",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "EXPLICIT",
+            "score": 8.529999732971191,
+            "containExplicitThemes": true,
+            "cover": {
+              "id": "SU1BR0U6MTM3MjM5MTMxOTk3NjE5NzI3",
+              "blurhash": "TVQSo7RO_NW-%#s:%2IVIo?aoLeo",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/137239099047167500/covers/505822019b96db1eb1a439ccdb03d7706dc1cddf_137239131997619727.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/IADHSv1-0f_QPdI5J-O-WVj9LTsK2dolsaZJXzwWR_c/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMzcyMzkwOTkwNDcxNjc1MDAvY292ZXJzLzUwNTgyMjAxOWI5NmRiMWViMWE0MzljY2RiMDNkNzcwNmRjMWNkZGZfMTM3MjM5MTMxOTk3NjE5NzI3LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          }
+        ],
+        "__typename": "ExperimentalSpotlightLabel"
+      },
+      {
+        "id": "768",
+        "label": {
+          "id": "TEFCRUw6NzY4",
+          "slug": "isekai",
+          "titles": [
+            {
+              "lang": "RU",
+              "content": "Исекай",
+              "__typename": "I18nTitle"
+            },
+            {
+              "lang": "EN",
+              "content": "Isekai",
+              "__typename": "I18nTitle"
+            }
+          ],
+          "gender": null,
+          "__typename": "Label"
+        },
+        "previewMangas": [
+          {
+            "id": "TUFOR0E6NTEzNDE5NjUzODc2NTM1NDQ",
+            "slug": "the-youngest-daughter-of-the-villainous-duke",
+            "originalName": {
+              "lang": "EN",
+              "content": "The Youngest Daughter of the Villainous Duke",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Little Lady Behind the Villain",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Истинная младшая дочь герцога-злодея",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "악당 공작가의 실세 막내딸입니다",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "SENSITIVE",
+            "score": 8.289999961853027,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NTEzNDIwODIyMDc0MDg1NTI",
+              "blurhash": "TWP62CH@-;~qaxEf9ZkpwOpIRkM{",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/51341965387653544/covers/49c363d44226c3d711631552f6ddd818af048a0b_51342082207408552.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/lLkw1keETQfbB86Z1s6K7P4SEXNrNYnWEFuChEhk9QY/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81MTM0MTk2NTM4NzY1MzU0NC9jb3ZlcnMvNDljMzYzZDQ0MjI2YzNkNzExNjMxNTUyZjZkZGQ4MThhZjA0OGEwYl81MTM0MjA4MjIwNzQwODU1Mi5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6ODQzODE0OTY2MDkxMDQzMDg",
+            "slug": "hitomi-the-vision-of-escaflowne",
+            "originalName": {
+              "lang": "JA",
+              "content": "Hitomi: The Vision of Escaflowne",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Хитоми: Видение Эскафлона",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "HITOMI 天空のエスカフローネ",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "GENERAL",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6ODQzODE1NTE5NTcxMzk4OTI",
+              "blurhash": "TKO_Gw;M+EL}o{GHjh$xIU#QIpO@",
+              "original": {
+                "height": 1000,
+                "width": 699,
+                "url": "https://mirai.senkuro.net/manga/84381496609104308/covers/8fe8b7914950a920c9b3a1d90fb128607b2a07bd_84381551957139892.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/HfgdfLa5gQljOdzA4dtt4rdSpdaIOzV-YfYHM0EdBTU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS84NDM4MTQ5NjYwOTEwNDMwOC9jb3ZlcnMvOGZlOGI3OTE0OTUwYTkyMGM5YjNhMWQ5MGZiMTI4NjA3YjJhMDdiZF84NDM4MTU1MTk1NzEzOTg5Mi5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MzY3ODE1OTczNDQ2ODY0ODA",
+            "slug": "fangkai-nage-nuwu",
+            "originalName": {
+              "lang": "ZH",
+              "content": "Fangkai nage nuw",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Release That Witch",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Освободите эту ведьму",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "放开那个女巫",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "KO",
+                "content": "마녀 사용설명서",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "ZH",
+                "content": "放开那个女巫",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANHUA",
+            "formats": [
+              "WEBTOON",
+              "IN_COLOR"
+            ],
+            "rating": "GENERAL",
+            "score": 8.5,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NjM0NjczMzE0MDEwNDg0NTg",
+              "blurhash": "TDI#ZH009#Tg^i9a0KMwV?Em9ZI9",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/36781597344686480/covers/badfab79bb55535cbbe43ebeb88b2922b71e2ee3_63467331401048458.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/lDyb9Pw8GOcH0Fcq3DXydxm-XFc5ldvp0zn2CgIpE2E/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8zNjc4MTU5NzM0NDY4NjQ4MC9jb3ZlcnMvYmFkZmFiNzliYjU1NTM1Y2JiZTQzZWJlYjg4YjI5MjJiNzFlMmVlM182MzQ2NzMzMTQwMTA0ODQ1OC5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          }
+        ],
+        "__typename": "ExperimentalSpotlightLabel"
+      },
+      {
+        "id": "892",
+        "label": {
+          "id": "TEFCRUw6ODky",
+          "slug": "slice_of_life",
+          "titles": [
+            {
+              "lang": "RU",
+              "content": "Повседневность",
+              "__typename": "I18nTitle"
+            },
+            {
+              "lang": "EN",
+              "content": "Slice of Life",
+              "__typename": "I18nTitle"
+            }
+          ],
+          "gender": null,
+          "__typename": "Label"
+        },
+        "previewMangas": [
+          {
+            "id": "TUFOR0E6NDA3MTMxMTQ2MjYzMTg3NTg",
+            "slug": "kanshakudama-no-yuuutsu",
+            "originalName": {
+              "lang": "JA",
+              "content": "Kanshakudama no Yuuutsu",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Short-Tempered Melancholic and Other Stories",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Мимолётная вспышка чувств",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "かんしゃく玉のゆううつ",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [
+              "DIGEST"
+            ],
+            "rating": "SENSITIVE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NDkyMjk3MjM2NzQzNzA0NTE",
+              "blurhash": "TVRU:Qs.*0*0V@RO%ibcbXRnn,sn",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/40713114626318758/covers/97300ea0ac96a871148d14c98522983b16417c6b_49229723674370451.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/H762s_rESg3vRfobUFUMXggLn3ISFRRLCNQC5sKiPLA/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80MDcxMzExNDYyNjMxODc1OC9jb3ZlcnMvOTczMDBlYTBhYzk2YTg3MTE0OGQxNGM5ODUyMjk4M2IxNjQxN2M2Yl80OTIyOTcyMzY3NDM3MDQ1MS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTc3Nzc2MzY3MjkzNzExOTA4",
+            "slug": "reset-life-of-a-hardcore-gamer",
+            "originalName": {
+              "lang": "JA",
+              "content": "Reset Life of a Hardcore Gamer",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Перезагрузка жизни геймера",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "게임 폐인의 리셋 라이프",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "WEB",
+              "WEBTOON",
+              "IN_COLOR"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.609999656677246,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTc3Nzc2NTk5NTkxMDQ0NjQ1",
+              "blurhash": "TJD]_TtA4:NLSL%%JFa0%2bbW9xu",
+              "original": {
+                "height": 999,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/177776367293711908/covers/8d139c2230a3678b15356bfe75aae77f14332a04_177776599591044645.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/4RWnFhsp3bUF8Pql_ZDUXWI8wxuqthyqTGTzUhy2S7c/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNzc3NzYzNjcyOTM3MTE5MDgvY292ZXJzLzhkMTM5YzIyMzBhMzY3OGIxNTM1NmJmZTc1YWFlNzdmMTQzMzJhMDRfMTc3Nzc2NTk5NTkxMDQ0NjQ1LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6NDA0NDYzMTM4NzUxMzY5MjY",
+            "slug": "he-loves-you",
+            "originalName": {
+              "lang": "JA",
+              "content": "He loves you",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Половинка, сделанная с любовью",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "HE LOVES YOU",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "SENSITIVE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6ODI0MjAxODc5MTUxMTY5NTI",
+              "blurhash": "TMQ,2KS1IU:h1j$zRO^+Nz~Cxtof",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/40446313875136926/covers/de755ab4cd06f3cf7c803e006c09c82cffbff611_82420187915116952.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/gxG3bXAN6WFW8mu_HHE_Jrvo_sCuiW9_eyFouKV2nGU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80MDQ0NjMxMzg3NTEzNjkyNi9jb3ZlcnMvZGU3NTVhYjRjZDA2ZjNjZjdjODAzZTAwNmMwOWM4MmNmZmJmZjYxMV84MjQyMDE4NzkxNTExNjk1Mi5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          }
+        ],
+        "__typename": "ExperimentalSpotlightLabel"
+      },
+      {
+        "id": "998",
+        "label": {
+          "id": "TEFCRUw6OTk4",
+          "slug": "erotica",
+          "titles": [
+            {
+              "lang": "RU",
+              "content": "Эротика",
+              "__typename": "I18nTitle"
+            },
+            {
+              "lang": "EN",
+              "content": "Erotica",
+              "__typename": "I18nTitle"
+            }
+          ],
+          "gender": null,
+          "__typename": "Label"
+        },
+        "previewMangas": [
+          {
+            "id": "TUFOR0E6MTk1ODY1NzQ0NTA2ODk3OTc4",
+            "slug": "land-of-the-dead",
+            "originalName": {
+              "lang": "JA",
+              "content": "Land of the Dead",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Земля мертвых",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "EXPLICIT",
+            "score": 7.03000020980835,
+            "containExplicitThemes": true,
+            "cover": {
+              "id": "SU1BR0U6MTk1ODY1OTE1NTAwMjgzNDQw",
+              "blurhash": "TQGkh09a0K~CS4RkDitR%gD%W;x]",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/195865744506897978/covers/cec85c53e4182347a303d4c2b29029769dc13786_195865915500283440.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/JpEQ9wBS2I6TvX9d_FNOowYC5vdEV82LObpIiDRW-fw/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xOTU4NjU3NDQ1MDY4OTc5NzgvY292ZXJzL2NlYzg1YzUzZTQxODIzNDdhMzAzZDRjMmIyOTAyOTc2OWRjMTM3ODZfMTk1ODY1OTE1NTAwMjgzNDQwLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTQ4OTYzNTU4MDgyNzU4MTcw",
+            "slug": "god-bless-you-halt",
+            "originalName": {
+              "lang": "JA",
+              "content": "God Bless You (Halt)",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Благослови тебя бог",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "EXPLICIT",
+            "score": 8.720000267028809,
+            "containExplicitThemes": true,
+            "cover": {
+              "id": "SU1BR0U6MTQ4OTYzNjY4OTQ2NjAxNDc1",
+              "blurhash": "TQGlVG8^0Lt88{x]xuM{-;RPWC%2",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/148963558082758170/covers/2e6987aec2366847d1ac2dcd825fc184ef09194c_148963668946601475.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/6dVjz12P0NchF8WuDsHkDrFtXs7ZgLp4OttpMn1Wof4/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNDg5NjM1NTgwODI3NTgxNzAvY292ZXJzLzJlNjk4N2FlYzIzNjY4NDdkMWFjMmRjZDgyNWZjMTg0ZWYwOTE5NGNfMTQ4OTYzNjY4OTQ2NjAxNDc1LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          },
+          {
+            "id": "TUFOR0E6MTk2NjY0MjY1MzEzMTA5NTYy",
+            "slug": "love-junkie",
+            "originalName": {
+              "lang": "EN",
+              "content": "Love Junkie",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Ненужная? Ненужная!",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "EXPLICIT",
+            "score": 8.430000305175781,
+            "containExplicitThemes": true,
+            "cover": {
+              "id": "SU1BR0U6MTk2NjY0MzY2ODE1MjY2MzUy",
+              "blurhash": "TaL|o*W:X9~p-px]9uxuWB?boLWB",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/196664265313109562/covers/c8dda813f30025c7dc288a05a8cf7cce9b18dddf_196664366815266352.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/s7FMtEWObqvvD-xMc-GRWB4cxDMEgHleqCEkrP0YbVY/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xOTY2NjQyNjUzMTMxMDk1NjIvY292ZXJzL2M4ZGRhODEzZjMwMDI1YzdkYzI4OGEwNWE4Y2Y3Y2NlOWIxOGRkZGZfMTk2NjY0MzY2ODE1MjY2MzUyLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga"
+          }
+        ],
+        "__typename": "ExperimentalSpotlightLabel"
+      }
+    ],
+    "experimentalSpotlightExperiences": [
+      {
+        "id": "VVNFUjoxMTc5MTg4NzQyMTY3MTE3MDA",
+        "experience": 2235,
+        "user": {
+          "id": "VVNFUjoxMTc5MTg4NzQyMTY3MTE3MDA",
+          "slug": "@117918874216711700",
+          "name": "onelifexp",
+          "verified": false,
+          "bot": false,
+          "level": 20,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6OTE",
+            "animation": false,
+            "blurhash": "KCF4_V0i5A%0xZM|59%KEN",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/91/9443daa6da173259c9fcd124e8280bad23bb28f0.jpeg",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6OTY",
+            "animation": true,
+            "blurhash": "KNCg{5-A$j1Cn-xIEgEd5i",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/96/05c78024f1d1d28d9f57160baaadcd0deb90b08b.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxNjAwMDEzOTM4ODM2MjkwNzc",
+        "experience": 2146,
+        "user": {
+          "id": "VVNFUjoxNjAwMDEzOTM4ODM2MjkwNzc",
+          "slug": "@160001393883629077",
+          "name": "Frossy",
+          "verified": false,
+          "bot": false,
+          "level": 13,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MjEy",
+            "animation": true,
+            "blurhash": "K57Kh^kCs:~Wx]R5xaxG,[",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/212/ec33e3a0b1581d247900142720b19317937ac324.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6NjY",
+            "animation": true,
+            "blurhash": "KcFzbBs=xKj]aeflw*ogA6",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/66/7f9828ddd6e04eba5e444dc34d9f645dc0989864.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxMjY2NDU3Mzg3OTE3ODE5MTk",
+        "experience": 2033,
+        "user": {
+          "id": "VVNFUjoxMjY2NDU3Mzg3OTE3ODE5MTk",
+          "slug": "frummy",
+          "name": "Frumentum",
+          "verified": false,
+          "bot": false,
+          "level": 20,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MjMz",
+            "animation": true,
+            "blurhash": "KIFF7$?EVss:t5Rk4VNHS~",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/233/e0cf4febfca1349b9627e27df88b0d69d4746950.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6MjM5",
+            "animation": true,
+            "blurhash": "KIBCA+$,KFIns;=$5MW-RT",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/239/479921e8862b8fc5e2b974084dc1a431d6391c77.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": {
+            "id": "RU1PSkk6MjQ0",
+            "animation": true,
+            "blurhash": "KSOMO74:~V-=EK9ZtlM}nQ",
+            "caption": null,
+            "original": {
+              "url": "https://mirai.senkuro.net/emojis/3/244_f893c9a3adc9360c00f123accd90ac6cc3856c8d.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjo3NjA3NTE1MjAxMzU1MDAwNA",
+        "experience": 1918,
+        "user": {
+          "id": "VVNFUjo3NjA3NTE1MjAxMzU1MDAwNA",
+          "slug": "@76075152013550004",
+          "name": "Fallen",
+          "verified": false,
+          "bot": false,
+          "level": 20,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MTE5",
+            "animation": false,
+            "blurhash": "KaKBA,E2~2w?Ic-TM}t6W.",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/119/c605652e751a4ae72aa32c2825ae0405803aefda.jpeg",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6NzY",
+            "animation": true,
+            "blurhash": "KcAcT?+zbVF@I=sCk6W.M@",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/76/072cc05f9d4ede2346da0665a7fc6f719aa084c1.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": {
+            "id": "RU1PSkk6MjYz",
+            "animation": true,
+            "blurhash": "KrL4EL0JD%%gRPRjIoWCoe",
+            "caption": null,
+            "original": {
+              "url": "https://mirai.senkuro.net/emojis/4/263_fe86fb373144758097a1365c61bd40bb663e716c.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxNTU1ODgxNDMxODgyOTcyNDg",
+        "experience": 1846,
+        "user": {
+          "id": "VVNFUjoxNTU1ODgxNDMxODgyOTcyNDg",
+          "slug": "@155588143188297248",
+          "name": "akva7676",
+          "verified": false,
+          "bot": false,
+          "level": 12,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MTA2",
+            "animation": false,
+            "blurhash": "KDJE}8xu.o0LIp?a{MOW%f",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/106/3069871afd450aaf002ab641d3012d9a0b962b9f.jpeg",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6OTc",
+            "animation": true,
+            "blurhash": "Kc8$I-bFn_V]fkoeoEjuMa",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/97/1624efb0ef47354b3b7930ced36fdfd42f532498.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxNDIxNjQzMjU2ODE4NzQ0ODM",
+        "experience": 1744,
+        "user": {
+          "id": "VVNFUjoxNDIxNjQzMjU2ODE4NzQ0ODM",
+          "slug": "@142164325681874483",
+          "name": "Mr. Bones ඞ{GOGD sect}",
+          "verified": false,
+          "bot": false,
+          "level": 20,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MjA0",
+            "animation": false,
+            "blurhash": "KMMhJt0eHYv2oz%gQoxaxt",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/204/913ef4f44260754bf2eac2e87aeffbc640dc760d.jpeg",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6MjQ5",
+            "animation": true,
+            "blurhash": "KA31B,i_k=uPe.k?pKkCVW",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/249/774ec85ee6957d7db5119c733b13039d1790c029.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxMzU1MzY2MDI3MDAwNzI1MDQ",
+        "experience": 1737,
+        "user": {
+          "id": "VVNFUjoxMzU1MzY2MDI3MDAwNzI1MDQ",
+          "slug": "@135536602700072504",
+          "name": "Q_IR_I",
+          "verified": false,
+          "bot": false,
+          "level": 10,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MjEz",
+            "animation": true,
+            "blurhash": "KwF=]t~q?bIUM{jtfkj[WB",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/213/6cd6a3184396c9892a665bd76644a106ed9fcda6.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6MjM1",
+            "animation": true,
+            "blurhash": "KXDi.X=Q$U=6R}XA,}j_E[",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/235/b941f6d77f7785baf8048b8b71073310e0604024.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": {
+            "id": "RU1PSkk6MTM5",
+            "animation": true,
+            "blurhash": "KtNKFr_4WooMxuM{xtWDxu",
+            "caption": null,
+            "original": {
+              "url": "https://mirai.senkuro.net/emojis/2/139_2ebcf851d9f329d99cb12d1669eb8de897cf1b1c.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoyMTA1NTU0MTkyODQ3NTE4ODE",
+        "experience": 1683,
+        "user": {
+          "id": "VVNFUjoyMTA1NTU0MTkyODQ3NTE4ODE",
+          "slug": "@210555419284751881",
+          "name": "ivanlevitsky",
+          "verified": false,
+          "bot": false,
+          "level": 2,
+          "avatar": null,
+          "frame": null,
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxNDI1NzgwNzE4OTM5ODQ4MTk",
+        "experience": 1541,
+        "user": {
+          "id": "VVNFUjoxNDI1NzgwNzE4OTM5ODQ4MTk",
+          "slug": "morisu",
+          "name": "Morning",
+          "verified": false,
+          "bot": false,
+          "level": 25,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6MjA5",
+            "animation": true,
+            "blurhash": "KLPE.f=}Tf~E-C%N5PE0In",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/209/09114b20497ec0aa0c2be2543011d952846db332.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6MjU2",
+            "animation": true,
+            "blurhash": "KTFFp%xsO_^DxsET^at84m",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/256/2172c71f055b542701f6b26bc6a82b2a37c03f80.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      },
+      {
+        "id": "VVNFUjoxMjAwNjgxODQyNDkyMjI2NzQ",
+        "experience": 1436,
+        "user": {
+          "id": "VVNFUjoxMjAwNjgxODQyNDkyMjI2NzQ",
+          "slug": "@120068184249222674",
+          "name": "Webvirus Virus",
+          "verified": false,
+          "bot": false,
+          "level": 15,
+          "avatar": {
+            "id": "Q09MTEVDVElCTEU6NzE",
+            "animation": true,
+            "blurhash": "KhLMog-pE1?KNF$+$+IpkQ",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/71/ab94b3c8c19845549595254a03b59a8ab065e88f.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "frame": {
+            "id": "Q09MTEVDVElCTEU6OA",
+            "animation": true,
+            "blurhash": "KXDvWZ%f},D+9hT2JpxuD%",
+            "original": {
+              "url": "https://mirai.senkuro.net/collectibles/8/e20e5121e406eff707e1119253bd7acc63ed9b99.webp",
+              "__typename": "ImageSize"
+            },
+            "__typename": "Image"
+          },
+          "status": null,
+          "__typename": "User"
+        },
+        "__typename": "ExperimentalSpotlightExperience"
+      }
+    ],
+    "mangaBookmarkNextChapters": [],
+    "lastMangaChapters": {
+      "edges": [
+        {
+          "node": {
+            "id": "TUFOR0E6MTQ0NTYwMzM2MjE5OTQ4NTk1",
+            "slug": "yani-neko",
+            "originalName": {
+              "lang": "JA",
+              "content": "Yani Neko",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Chainsmoker Cat",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Табакошка",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "QUESTIONABLE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTQ0NTYwNDI2ODUwNDY5NDI1",
+              "blurhash": "TKJ8Ll?G0K%$%h%04?.8xGIosk%1",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/144560336219948595/covers/6c826c683ffe39952b13ccea2e32cc636cbe3925_144560426850469425.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/-Vpj0QC225zfDVMVu4rgOPhUBxtEd0yIRk8-iF_5z1c/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNDQ1NjAzMzYyMTk5NDg1OTUvY292ZXJzLzZjODI2YzY4M2ZmZTM5OTUyYjEzY2NlYTJlMzJjYzYzNmNiZTM5MjVfMTQ0NTYwNDI2ODUwNDY5NDI1LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MTE4NDA2NDk3OTEwMDI",
+                "slug": "214711840649791002",
+                "number": "45",
+                "volume": "2",
+                "name": "45 мг",
+                "createdAt": "2026-01-21T05:30:29.913860",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDkyNzcwMDgzNjA3ODU0MzQ",
+                "slug": "209277008360785434",
+                "number": "44",
+                "volume": "2",
+                "name": "44 мг",
+                "createdAt": "2025-12-14T17:40:17.437657",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDQzNjI0NzQ1MDAxNDY2OTQ",
+                "slug": "204362474500146694",
+                "number": "27.2",
+                "volume": "1",
+                "name": "Кошко-бонус 2",
+                "createdAt": "2025-11-10T19:58:46.989374",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDQzNjI0MzkxNTA1NTI1ODI",
+                "slug": "204362439150552582",
+                "number": "28",
+                "volume": "2",
+                "name": "28 мг",
+                "createdAt": "2025-11-10T19:58:25.910478",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MjE0NDk5NTA4MjIwODcyMjUw",
+            "slug": "yu-je",
+            "originalName": {
+              "lang": "JA",
+              "content": "Yu je",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The hole",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Пуповина",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "EXPLICIT",
+            "score": 8.529999732971191,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MjE0NDk5ODYzMjA5OTg1NTM4",
+              "blurhash": "TI9k1@RP-;xvaeoL4Ta{ITM{ayRj",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/214499508220872250/covers/cb2ffbbd4aa58a3609941fbd493920d75ca89d85_214499863209985538.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/mVlG_1IQMeSUf_XUhv7bikhCDOvSuAbIUrBoALvLZqE/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8yMTQ0OTk1MDgyMjA4NzIyNTAvY292ZXJzL2NiMmZmYmJkNGFhNThhMzYwOTk0MWZiZDQ5MzkyMGQ3NWNhODlkODVfMjE0NDk5ODYzMjA5OTg1NTM4LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDgyOTg2MjcxNzE4NjY",
+                "slug": "214708298627171866",
+                "number": "6",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:55:18.700155",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ1Nzk5NjQ4NTMzNzI0NDI",
+                "slug": "214579964853372442",
+                "number": "5",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T07:40:25.818203",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ0OTk2NzcyMTc3Njg5ODY",
+                "slug": "214499677217768986",
+                "number": "4",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-19T18:22:50.659373",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ0OTk2NjUzNTYyNzcyNzQ",
+                "slug": "214499665356277274",
+                "number": "1",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-19T18:22:43.587185",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MjE0NzA2NDA1MzUxOTAwNzMw",
+            "slug": "i-have-gained-the-universal-ability-to-turn-experience-into-skills",
+            "originalName": {
+              "lang": "EN",
+              "content": "I have gained the universal ability to turn experience into skills.",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "I have gained the universal ability to turn experience into skills.",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Я получил универсальную способность превращать опыт в навыки!",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "QUESTIONABLE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MjE0NzA2NTQyMDY5NDMzODU4",
+              "blurhash": "TPI#4Jx^}s^OS~%2krkrS1FzM{xU",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/214706405351900730/covers/36d8e2e79fe62b43cd4619c8b5684b34473fc5ea_214706542069433858.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/76ZNSI_nzKQWMmAdXDzLj4CxhlmStoyOGHuVQOLLaMg/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8yMTQ3MDY0MDUzNTE5MDA3MzAvY292ZXJzLzM2ZDhlMmU3OWZlNjJiNDNjZDQ2MTljOGI1Njg0YjM0NDczZmM1ZWFfMjE0NzA2NTQyMDY5NDMzODU4LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDY2MjExOTA3ODQ1Mzg",
+                "slug": "214706621190784538",
+                "number": "2.2",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:38:38.873048",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDY2MTcyOTg0NzA0MjY",
+                "slug": "214706617298470426",
+                "number": "2.1",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:38:36.558949",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDY2MTQ3ODE4ODgwMjY",
+                "slug": "214706614781888026",
+                "number": "1.3",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:38:35.053781",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDY2MDk4NDkzODY1MjI",
+                "slug": "214706609849386522",
+                "number": "1.2",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:38:32.111593",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MzUzNTc3MTcxMTk5MTg1MTk",
+            "slug": "tsuiho-sa-reta-tensei-ju-kishi-wa-gemu-chishiki-de-muso-suru",
+            "originalName": {
+              "lang": "JA",
+              "content": "Tsuihou sareta Tensei Juukishi wa Game Chishiki de Musou suru",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Exiled Heavy Knight Knows How to Game the System",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Изгнанный реинкарнированный тяжёлый рыцарь не имеет себе равных в знаниях игры",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "追放された転生重騎士はゲーム知識で無双する",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [
+              "WEB"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.34000015258789,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NDc1MzU1MzEyNDM4ODkwODY",
+              "blurhash": "TjHCG@RiWB?w%2WX%$axaypKj[t6",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/35357717119918519/covers/00ba855df053bd03273a6a95344c780a8d7b888f_47535531243889086.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/FZ91M2D3TTCU7auzpqxHQA5UsXGdqe0Vp-xkcR8VB9A/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8zNTM1NzcxNzExOTkxODUxOS9jb3ZlcnMvMDBiYTg1NWRmMDUzYmQwMzI3M2E2YTk1MzQ0Yzc4MGE4ZDdiODg4Zl80NzUzNTUzMTI0Mzg4OTA4Ni5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDU4NjQ0MjA5MDI0MjY",
+                "slug": "214705864420902426",
+                "number": "149",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:31:07.800627",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDU0OTU4NDIyNDQxMjI",
+                "slug": "214705495842244122",
+                "number": "150",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:27:28.114797",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTEwNzg2MzU3NDA3NDMxOTQ",
+                "slug": "211078635740743194",
+                "number": "147",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-27T03:57:51.035108",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTEwNzg2MjAxMDQzNzc4ODI",
+                "slug": "211078620104377882",
+                "number": "146",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-27T03:57:41.715699",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6NTU1MDQzMDgxODcxOTM3Nzk",
+            "slug": "bunsin-eulo-jadongsanyan",
+            "originalName": {
+              "lang": "JA",
+              "content": "bunsin-eulo jadongsanyan",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Auto Hunting With My Clones",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Автоохота с клонами",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "분신으로 자동사냥",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "SENSITIVE",
+            "score": 8.75,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NTU1MDQzODIxOTE0OTM1NTU",
+              "blurhash": "TVHnmgNGO?Y8t3SN3sxD$jpx-VxX",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/55504308187193779/covers/dcffabdee674256203f998983f5a0760a0081fac_55504382191493555.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/h4oJ--3djPX7vN5pM1qdhJjNfCC4J2nBP1X7h-u7NZg/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81NTUwNDMwODE4NzE5Mzc3OS9jb3ZlcnMvZGNmZmFiZGVlNjc0MjU2MjAzZjk5ODk4M2Y1YTA3NjBhMDA4MWZhY181NTUwNDM4MjE5MTQ5MzU1NS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDU1MDM1NTk3NjM0ODI",
+                "slug": "214705503559763482",
+                "number": "169",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:27:32.712054",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTE2MTgxNTg4MTE4MjU2OTA",
+                "slug": "211618158811825690",
+                "number": "168",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-30T21:17:31.844747",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTA5NDk3NTA1ODM3Mzk5MzA",
+                "slug": "210949750583739930",
+                "number": "167",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-26T06:37:29.494927",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDgyODQwOTY3NDc1NTQzMTI",
+                "slug": "208284096747554312",
+                "number": "166",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-07T21:16:35.998308",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6NTQ2MDI4OTc4MTU1Mjc4NjA",
+            "slug": "the-pale-horse",
+            "originalName": {
+              "lang": "EN",
+              "content": "The Pale Horse",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Pale Horse",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Бледный конь",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "창백한 말",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.149999618530273,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NTQ2MDMyOTg0NzIyMjMxNTY",
+              "blurhash": "TpMi.mbIX8_Nn%WEyDjsnitRWWWB",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/54602897815527860/covers/5b82d6b6af842034998629542a0d0749b37e6b89_54603298472223156.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/SW_ufhXeBA0l4WrWBg5_QbgEvgP78A-314Cnqc-1Os0/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81NDYwMjg5NzgxNTUyNzg2MC9jb3ZlcnMvNWI4MmQ2YjZhZjg0MjAzNDk5ODYyOTU0MmEwZDA3NDliMzdlNmI4OV81NDYwMzI5ODQ3MjIyMzE1Ni5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDM4MjcwMjkzNDU4MTg",
+                "slug": "214703827029345818",
+                "number": "273",
+                "volume": "4",
+                "name": null,
+                "createdAt": "2026-01-21T04:10:53.429233",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQyNjg5NDU2MTg3MTYxODY",
+                "slug": "214268945618716186",
+                "number": "272",
+                "volume": "4",
+                "name": null,
+                "createdAt": "2026-01-18T04:10:43.902183",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM4MzQ1NzI0MjM1MTM2MjY",
+                "slug": "213834572423513626",
+                "number": "271",
+                "volume": "4",
+                "name": null,
+                "createdAt": "2026-01-15T04:15:37.308441",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM0MDg3NTQ0ODQzOTc1OTQ",
+                "slug": "213408754484397594",
+                "number": "270",
+                "volume": "4",
+                "name": null,
+                "createdAt": "2026-01-12T05:45:30.031405",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MjE0Njg5MTc0MDYwNTQ5Njkw",
+            "slug": "shenwu-di-zun",
+            "originalName": {
+              "lang": "ZH",
+              "content": "Shén Wǔ Dì Zūn",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Martial Emperor",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Император Боевых Искусств",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "HIATUS",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 0.0,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MjE0Njg5OTI3NDI0NjU2ODk4",
+              "blurhash": "TGL|i+Skr@1OxVO@T|%#KR7KTLso",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/214689174060549690/covers/b0ed9afb9956622eceaafc9aea41932fd60c9dc1_214689927424656898.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/jXGFW4ft1IC5U6dxvIpWTeu9gIW8IAQ4j21wiUtO40E/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8yMTQ2ODkxNzQwNjA1NDk2OTAvY292ZXJzL2IwZWQ5YWZiOTk1NjYyMmVjZWFhZmM5YWVhNDE5MzJmZDYwYzlkYzFfMjE0Njg5OTI3NDI0NjU2ODk4LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "FINISHED",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDMxMjI0MzY2MDU0NjY",
+                "slug": "214703122436605466",
+                "number": "105",
+                "volume": "1",
+                "name": "Конец 1-го сезона",
+                "createdAt": "2026-01-21T04:03:53.452448",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDMwODc4NzU1NDA1MDY",
+                "slug": "214703087875540506",
+                "number": "104",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:03:32.854188",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDMwNTY0NTE4MTQ5Mzg",
+                "slug": "214703056451814938",
+                "number": "103",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:03:14.125798",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ3MDMwMjc1NjE0NDg5ODY",
+                "slug": "214703027561448986",
+                "number": "102",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T04:02:56.905878",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTQxMDk3NDc3MjEzMjc1Njk5",
+            "slug": "turned-into-a-black-flower",
+            "originalName": {
+              "lang": "JA",
+              "content": "Turned Into a Black Flower",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Меч стал цветком",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "검은 꽃이 되었다",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.539999961853027,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTQxMDk3Njk4MTM1NjU1OTg1",
+              "blurhash": "TgMsjJD$5TtWaOOY?bWZWSXAjYoc",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/141097477213275699/covers/09e943f6277ad0d276d26ca7211b9fc04305ac37_141097698135655985.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/fKKNzIRBXKjRnCS8ofRQofRJqXWveiiRlN7qKqoyaDk/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNDEwOTc0NzcyMTMyNzU2OTkvY292ZXJzLzA5ZTk0M2Y2Mjc3YWQwZDI3NmQyNmNhNzIxMWI5ZmMwNDMwNWFjMzdfMTQxMDk3Njk4MTM1NjU1OTg1LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2OTgyMzQwMjU2MjUxMTQ",
+                "slug": "214698234025625114",
+                "number": "68",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T03:15:19.736506",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2Mjg4MTc0ODkxMTg3NDY",
+                "slug": "214628817489118746",
+                "number": "67",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T15:45:44.252797",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTMxNjI3MDk3NjY2NTM0NjY",
+                "slug": "213162709766653466",
+                "number": "66",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-10T13:01:15.951847",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTE1ODQyNDY0MjExNDUxMTQ",
+                "slug": "211584246421145114",
+                "number": "64",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-30T15:40:38.487531",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTMxODc2MjQ3NzkyNzk3MjMx",
+            "slug": "i-m-done-being-a-hero-even-if-it-s-retirement",
+            "originalName": {
+              "lang": "JA",
+              "content": "I'm Done Being a Hero, Even If It's Retirement",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Хватит с меня геройств, я ухожу!",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.390000343322754,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTMxODc2Mjc4NDYxNjEzNjE1",
+              "blurhash": "TPP6Bh.lD$~nt,M~$LKRr^XUt7wH",
+              "original": {
+                "height": 999,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/131876247792797231/covers/67d1f566c9866f42da9568afa747f567e5080a3a_131876278461613615.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/a3PS5h4Vfk5OwqZqk6JXMaBXq5eO3iyDLH88vuEyetg/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMzE4NzYyNDc3OTI3OTcyMzEvY292ZXJzLzY3ZDFmNTY2Yzk4NjZmNDJkYTk1NjhhZmE3NDdmNTY3ZTUwODBhM2FfMTMxODc2Mjc4NDYxNjEzNjE1LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2OTQyMTQ2OTEyMTA3Nzg",
+                "slug": "214694214691210778",
+                "number": "73",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T02:35:24.023799",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQwOTUyNzk5MDc5NDgwNTg",
+                "slug": "214095279907948058",
+                "number": "72",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-16T23:25:31.078004",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTMwMTYxNjQyNTc3NzcxNzg",
+                "slug": "213016164257777178",
+                "number": "71",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-09T12:45:28.020526",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoxODc4NTI4OTM3NjY4Mjk1ODA",
+                "slug": "187852893766829580",
+                "number": "70",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-07-19T22:30:50.033046",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTA4MTAxMzkxNzY3MDY5MTAx",
+            "slug": "sss-ji-chaoyue-changli-de-sheng-qishi",
+            "originalName": {
+              "lang": "JA",
+              "content": "SSS Ji Chaoyue Changli De Sheng Qishi",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Паладин уровня SSS, превосходящий здравый смысл",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.930000305175781,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTA4MTAxNDMyNjUzMTQ0NDkz",
+              "blurhash": "TJOL-.R:~S-@xaWatAS2RX~kRny9",
+              "original": {
+                "height": 1000,
+                "width": 699,
+                "url": "https://mirai.senkuro.net/manga/108101391767069101/covers/9e59f2c85faa8e8a3895321b9873c33a672c2f4d_108101432653144493.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/z2e1EDREQTNHKK6KZgcJH13yFsw66oFiXcnhB07lxUI/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMDgxMDEzOTE3NjcwNjkxMDEvY292ZXJzLzllNTlmMmM4NWZhYThlOGEzODk1MzIxYjk4NzNjMzNhNjcyYzJmNGRfMTA4MTAxNDMyNjUzMTQ0NDkzLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2OTE5NDc0NTE3OTQ5NzA",
+                "slug": "214691947451794970",
+                "number": "92",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T02:12:52.644459",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQyNDA3OTg5Njk5NzIyNTA",
+                "slug": "214240798969972250",
+                "number": "91",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-17T23:31:07.197583",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQyMjkzOTM0MTU4ODIyNjY",
+                "slug": "214229393415882266",
+                "number": "90",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-17T21:37:48.952798",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDM0MzMyMTIwODc2NDk3OTg",
+                "slug": "203433212087649798",
+                "number": "89",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-11-04T10:07:23.428506",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": true,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6NTYwNzA5MDk4NTI2NzIzOTk",
+            "slug": "arcane-shooter",
+            "originalName": {
+              "lang": "EN",
+              "content": "Arcane Shooter",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "Mystic Musketeer",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Магический стрелок",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "마탄의 사수",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "SENSITIVE",
+            "score": 8.6899995803833,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NTYwNzEwMTU5MDE0NTQ3MzU",
+              "blurhash": "THJtYyEJ9a_3TdicLgk?VY%$ohH?",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/56070909852672399/covers/aac76b215c19f6be9877f3c11f13c36f316ccfe1_56071015901454735.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/koUYWyGYs1UEZ_5-lsaxfs9nxS9hmjKTPvt_j283TqM/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81NjA3MDkwOTg1MjY3MjM5OS9jb3ZlcnMvYWFjNzZiMjE1YzE5ZjZiZTk4NzdmM2MxMWYxM2MzNmYzMTZjY2ZlMV81NjA3MTAxNTkwMTQ1NDczNS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2OTEzOTI0NDQ3MTI0NzQ",
+                "slug": "214691392444712474",
+                "number": "214",
+                "volume": "5",
+                "name": null,
+                "createdAt": "2026-01-21T02:07:21.831501",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQyMzU0MTEwNTA5Mzk5MzA",
+                "slug": "214235411050939930",
+                "number": "213",
+                "volume": "5",
+                "name": null,
+                "createdAt": "2026-01-17T22:37:35.741643",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTE5NjYzNTQ0OTQ4NjY5NzA",
+                "slug": "211966354494866970",
+                "number": "211",
+                "volume": "5",
+                "name": null,
+                "createdAt": "2026-01-02T06:56:32.642403",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTE5NTQzNjY0ODYxNjkxMTQ",
+                "slug": "211954366486169114",
+                "number": "212",
+                "volume": "5",
+                "name": null,
+                "createdAt": "2026-01-02T04:57:27.239873",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTY4MzUyNzI3NDg5ODU4ODA0",
+            "slug": "darashinai-desu-hotta-sensei",
+            "originalName": {
+              "lang": "JA",
+              "content": "Darashinai desu, Hotta-sensei!",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Вы так неряшливы, учитель Хотта!",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "QUESTIONABLE",
+            "score": 8.369999885559082,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTY4MzUyOTQxODg1OTExMzcz",
+              "blurhash": "TMQvas.9bY4mtRR6s*nhtSI]xGt5",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/168352727489858804/covers/0c1e0f1b982fab930dc1ba166a192a228b4d3dee_168352941885911373.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/jGx6-VzlfuhV6t9KaVEXO0lz7MTi6uPBDpozYcGn1aE/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNjgzNTI3Mjc0ODk4NTg4MDQvY292ZXJzLzBjMWUwZjFiOTgyZmFiOTMwZGMxYmExNjZhMTkyYTIyOGI0ZDNkZWVfMTY4MzUyOTQxODg1OTExMzczLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2OTEyMjczNzM2ODQyNTA",
+                "slug": "214691227373684250",
+                "number": "71",
+                "volume": "7",
+                "name": "Пожалуйста, прикоснись ко мне, Макото-кун",
+                "createdAt": "2026-01-21T02:05:43.448228",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDY2MzQ2MjU5ODI4MDk2MTk",
+                "slug": "206634625982809619",
+                "number": "70",
+                "volume": "7",
+                "name": "Я не могу уснуть, Хотта-сэнсэй",
+                "createdAt": "2025-11-26T12:10:34.801971",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDQ1ODEwODQ5ODAwNjk4OTQ",
+                "slug": "204581084980069894",
+                "number": "69",
+                "volume": "7",
+                "name": "Потопчите как следует, Хотта-сэнсэй",
+                "createdAt": "2025-11-12T08:10:28.987206",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDM1MTkxMDMzMzAxNzQ0NzA",
+                "slug": "203519103330174470",
+                "number": "68",
+                "volume": "7",
+                "name": "Тебе её не понять, Макото-кун",
+                "createdAt": "2025-11-05T00:20:38.591853",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MzU0MTkyNzUzNDI2NjgxODA",
+            "slug": "the-strong-man-from-the-mental-hospital",
+            "originalName": {
+              "lang": "EN",
+              "content": "The Strong Man From the Mental Hospital",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Сильнейший из психиатрической больницы",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "SENSITIVE",
+            "score": 8.9399995803833,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NTg5ODExNzgyNjYzNzg2NzY",
+              "blurhash": "TQEM:[Si0$E.bcx^4ns:,.t3t7iv",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/35419275342668180/covers/cec341185eec5404b42dc79f445cb1c40aca8175_58981178266378676.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/IxmZ3DX4TubuX-mVdwxtCdkOfnZhIFwPJp_hv5yudaI/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8zNTQxOTI3NTM0MjY2ODE4MC9jb3ZlcnMvY2VjMzQxMTg1ZWVjNTQwNGI0MmRjNzlmNDQ1Y2IxYzQwYWNhODE3NV81ODk4MTE3ODI2NjM3ODY3Ni5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2ODg0OTIwNDk5NDIwNDI",
+                "slug": "214688492049942042",
+                "number": "362",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T01:38:33.066011",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2ODg0OTE0NDU5NjIyNjY",
+                "slug": "214688491445962266",
+                "number": "363",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T01:38:32.700253",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzUyODU4MTQwMzU5OTQ",
+                "slug": "214675285814035994",
+                "number": "364",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T23:27:21.535964",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDkxOTgxOTIxNzA5MTEyNTg",
+                "slug": "209198192170911258",
+                "number": "361",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-14T04:37:19.324700",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTczMDM2NjAxNzA4OTI0MTEx",
+            "slug": "choegang-ui-deonjeon-eul-wihayeo",
+            "originalName": {
+              "lang": "JA",
+              "content": "choegang-ui deonjeon-eul wihayeo",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Архитектор подземелий",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "최강 던전을 위하여",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.09000015258789,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTczMDM2NzIyNjM5MTA2Mzgx",
+              "blurhash": "TRK2hfOtyrMeadVs?^IAIAR*V@oI",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/173036601708924111/covers/531c2d3b000f8ca4f02751c4256c6ce001f9a4d6_173036722639106381.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/_yrcCxAh8rUTzQz0XEoymWcrCIXfXjR84MJ-foWvYUA/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNzMwMzY2MDE3MDg5MjQxMTEvY292ZXJzLzUzMWMyZDNiMDAwZjhjYTRmMDI3NTFjNDI1NmM2Y2UwMDFmOWE0ZDZfMTczMDM2NzIyNjM5MTA2MzgxLmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2ODgzNzk0OTE1OTk4OTg",
+                "slug": "214688379491599898",
+                "number": "65",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T01:37:25.979114",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM2NDk4OTE3NjU3OTg0MjY",
+                "slug": "213649891765798426",
+                "number": "64",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-13T21:40:59.059259",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTI1OTU0Nzg3Mzc0NzEwMDI",
+                "slug": "212595478737471002",
+                "number": "63",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-06T15:06:19.915068",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTEzNDcyNTUxOTI0NzEwNjY",
+                "slug": "211347255192471066",
+                "number": "62",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-29T00:26:20.706783",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MjAzNzIyMzU1NzYyMDIxOTM1",
+            "slug": "yu-shou-jin-hua",
+            "originalName": {
+              "lang": "JA",
+              "content": "Yu Shou Jin Hua",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Эволюция Укротителя Зверей",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.460000038146973,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MjAzNzIyNDYyMTEyNzk0MTQ4",
+              "blurhash": "TDJQ=+8^IeD5:hTI,%Md?aD*tID;",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/203722355762021935/covers/58e4f24738f638f553adfad408e2d899ca2f6df8_203722462112794148.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/V8mZqT0oWnmSLyrojXCJQS2c4vvPGF1vq-C9a-bzMZU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8yMDM3MjIzNTU3NjIwMjE5MzUvY292ZXJzLzU4ZTRmMjQ3MzhmNjM4ZjU1M2FkZmFkNDA4ZTJkODk5Y2EyZjZkZjhfMjAzNzIyNDYyMTEyNzk0MTQ4LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2Nzk2NjM2OTQzMzM0NjY",
+                "slug": "214679663694333466",
+                "number": "13",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T00:10:50.951941",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM2NjY0OTM3NzczMzE3Mzg",
+                "slug": "213666493777331738",
+                "number": "10",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-14T00:25:54.628650",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM2NjY0OTI0Njg3MDg4OTA",
+                "slug": "213666492468708890",
+                "number": "12",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-14T00:25:53.848456",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM2NjY0ODk1ODMwMjc3Mzg",
+                "slug": "213666489583027738",
+                "number": "11",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-14T00:25:52.123872",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTc5Nzk2NzQ5NDA0MDk2MDA5",
+            "slug": "young-lady-s-knight",
+            "originalName": {
+              "lang": "JA",
+              "content": "Young Lady's Knight",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Защитник юной леди",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "EXPLICIT",
+            "score": 8.699999809265137,
+            "containExplicitThemes": true,
+            "cover": {
+              "id": "SU1BR0U6MTc5Nzk2ODM0NDY0NTgxMTY3",
+              "blurhash": "TaIzxU0LIo$%NbR+IUS1x]Rjofxa",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/179796749404096009/covers/789dbee210fa74b1830548b712d39be79aabcdc9_179796834464581167.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/TdpALB8m87SnbGyOk4GE3ASRZfa2bd0gVzVLvbIUBdU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNzk3OTY3NDk0MDQwOTYwMDkvY292ZXJzLzc4OWRiZWUyMTBmYTc0YjE4MzA1NDhiNzEyZDM5YmU3OWFhYmNkYzlfMTc5Nzk2ODM0NDY0NTgxMTY3LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2Nzg4MDU1OTAwNjY3MTQ",
+                "slug": "214678805590066714",
+                "number": "26",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-21T00:02:19.483348",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQzODMzNTY5NTQwMzU3Mzg",
+                "slug": "214383356954035738",
+                "number": "25",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-18T23:07:18.377931",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM4ODc5NzI0Mzk3NzA2NTA",
+                "slug": "213887972439770650",
+                "number": "22",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-15T13:06:06.191275",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM4ODc5Njg3MTUyMjg2OTg",
+                "slug": "213887968715228698",
+                "number": "23",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-15T13:06:03.979344",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6OTE3NDYwNjAyODc4OTM4OTU",
+            "slug": "ride-on-king",
+            "originalName": {
+              "lang": "JA",
+              "content": "Ride-On King",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Ride-On King",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Король-наездник",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "ライドンキング",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "FINISHED",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "SENSITIVE",
+            "score": 8.210000038146973,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6OTE3NDYxNTg1MTg0OTM1NzU",
+              "blurhash": "TXHoUvct-;=??FxaPXRiR%KkV?n3",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/91746060287893895/covers/816128195b75eeb4cc60bed484ce3792c8ee9285_91746158518493575.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/WSXlJGRMPZ7uJLfcx2GJL5c1vnTtutaQaVavA9w_PbY/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS85MTc0NjA2MDI4Nzg5Mzg5NS9jb3ZlcnMvODE2MTI4MTk1Yjc1ZWViNGNjNjBiZWQ0ODRjZTM3OTJjOGVlOTI4NV85MTc0NjE1ODUxODQ5MzU3NS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "ABANDONED",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzMxNTExMzE0MDM4MDI",
+                "slug": "214673151131403802",
+                "number": "80",
+                "volume": "15",
+                "name": "Президент и Белый Маг",
+                "createdAt": "2026-01-20T23:06:09.164631",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTEwNDcyOTI1NDU4MTE5OTQ",
+                "slug": "211047292545811994",
+                "number": "79",
+                "volume": "15",
+                "name": "Президент и Вьющийся Маг",
+                "createdAt": "2025-12-26T22:46:29.038983",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDcwODc3MTkyNDU5NTY2Mjc",
+                "slug": "207087719245956627",
+                "number": "78",
+                "volume": "15",
+                "name": "Президент и Кипящий Котёл",
+                "createdAt": "2025-11-29T15:11:39.435558",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDQxMTIxMTMzOTA2MDE3MzQ",
+                "slug": "204112113390601734",
+                "number": "77",
+                "volume": "15",
+                "name": "Президент и Чёрноволосая Мечница",
+                "createdAt": "2025-11-09T02:31:40.132983",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTg2MzE1MjQ1ODE0MzAyMjEw",
+            "slug": "tyrant-of-the-otherworld-prison-my-shadow-can-evolve-infinitely",
+            "originalName": {
+              "lang": "JA",
+              "content": "Tyrant of the Otherworld Prison: My Shadow Can Evolve Infinitely",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Владыка чужого мира",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHUA",
+            "formats": [
+              "IN_COLOR",
+              "WEB",
+              "WEBTOON"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 7.300000190734863,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTg2MzE1MzY4NjA2NzQ2MTQ0",
+              "blurhash": "TLF5UuxHIAxoInM_9Do$boD+xc-=",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/186315245814302210/covers/ad380a2dc3d11da8e77d84b78b6fbf9ee96f50be_186315368606746144.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/hQuZuQbmLOaxjbVXP3D4TrLJsV29bjIea29FXVJIgyw/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xODYzMTUyNDU4MTQzMDIyMTAvY292ZXJzL2FkMzgwYTJkYzNkMTFkYThlNzdkODRiNzhiNmZiZjllZTk2ZjUwYmVfMTg2MzE1MzY4NjA2NzQ2MTQ0LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzIyNzQyODY5ODY3Nzg",
+                "slug": "214672274286986778",
+                "number": "33",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T22:57:26.520268",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NjMzMDA0MzkzNjEwNTA",
+                "slug": "214663300439361050",
+                "number": "27",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T21:28:17.690086",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NjI3Njk1NTc5MTUxNjI",
+                "slug": "214662769557915162",
+                "number": "26",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T21:23:01.260363",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NjE3NzA3NTk5MTUwMzQ",
+                "slug": "214661770759915034",
+                "number": "24",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T21:13:05.938464",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": true,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6MTg3OTI3MDE3NDg2ODI5MDkx",
+            "slug": "the-turn-bound-mage",
+            "originalName": {
+              "lang": "JA",
+              "content": "The Turn-Bound Mage",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "RU",
+                "content": "Пошаговый мастер лабиринта",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "턴제의 마법사",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "WEB",
+              "WEBTOON",
+              "IN_COLOR"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.789999961853027,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6MTg3OTI3MTQ4MDEzNTY5NTY4",
+              "blurhash": "TNE:ifTO9a17Rk-=HqI9r?n3%1IV",
+              "original": {
+                "height": 999,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/187927017486829091/covers/36a6a9e4d9aec6e2c3ce37753f961d84e28a624f_187927148013569568.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/ukQn1ka-wjfnV9n7FaO2SuTxWvaMD2L6FhNA7zD96P8/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xODc5MjcwMTc0ODY4MjkwOTEvY292ZXJzLzM2YTZhOWU0ZDlhZWM2ZTJjM2NlMzc3NTNmOTYxZDg0ZTI4YTYyNGZfMTg3OTI3MTQ4MDEzNTY5NTY4LmpwZWc.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzE3NjYyNTYxMDkwODI",
+                "slug": "214671766256109082",
+                "number": "40",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-20T22:52:23.711405",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM3OTQ1NTQxMzI4NDIwMTA",
+                "slug": "213794554132842010",
+                "number": "39",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-14T21:38:04.546907",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTI5MjM0MTI5NjI2MjUwNTA",
+                "slug": "212923412962625050",
+                "number": "38",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-08T21:24:03.946138",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTA2NjIzNTE0MjEwNjQ3MzA",
+                "slug": "210662351421064730",
+                "number": "37",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2025-12-24T07:02:26.243658",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6NjY0ODgzOTkwMzIyNDY3MTY",
+            "slug": "the-dungeon-cleaning-life-of-a-once-genius-hunter",
+            "originalName": {
+              "lang": "JA",
+              "content": "The Dungeon Cleaning Life of a Once Genius Hunter",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Dungeon Cleaning Life of a Once Genius Hunter",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Жизнь гениального охотника за уборкой",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "회귀한 천재 헌터의 슬기로운 청소생활",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANHWA",
+            "formats": [
+              "WEB",
+              "WEBTOON",
+              "IN_COLOR"
+            ],
+            "rating": "QUESTIONABLE",
+            "score": 8.300000190734863,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NjY0ODg0MzE0MTIyNzM1OTY",
+              "blurhash": "TXF?^bI:cF_NNG-;tRM{#j?aR+VY",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/66488399032246716/covers/9f10087f1924157547d601869677d45f24332316_66488431412273596.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/PFnEx4L90EVaZdtjmIFJjcfYc6BCkkuxtIpl_cCJ3RI/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS82NjQ4ODM5OTAzMjI0NjcxNi9jb3ZlcnMvOWYxMDA4N2YxOTI0MTU3NTQ3ZDYwMTg2OTY3N2Q0NWYyNDMzMjMxNl82NjQ4ODQzMTQxMjI3MzU5Ni5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzE1ODM4NzA5OTM5NDY",
+                "slug": "214671583870993946",
+                "number": "118",
+                "volume": "3",
+                "name": null,
+                "createdAt": "2026-01-20T22:50:35.002634",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTI3NDM1MDIwMDAzMDk3ODY",
+                "slug": "212743502000309786",
+                "number": "116",
+                "volume": "3",
+                "name": null,
+                "createdAt": "2026-01-07T15:36:48.657277",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTI3NDM0MzU4NDc3NDcwOTg",
+                "slug": "212743435847747098",
+                "number": "44.1",
+                "volume": "1",
+                "name": null,
+                "createdAt": "2026-01-07T15:36:09.224903",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTI3NDE5MzQ0NTQ2ODcyNTg",
+                "slug": "212741934454687258",
+                "number": "117",
+                "volume": "3",
+                "name": null,
+                "createdAt": "2026-01-07T15:21:14.323627",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        },
+        {
+          "node": {
+            "id": "TUFOR0E6NTkyNTQwNDE3MTYyMjAzMTc",
+            "slug": "saikyou-no-shien-shoku-wajutsushi-dearu-ore-wa-sekai-saikyou-kuran-o-shitagaeru",
+            "originalName": {
+              "lang": "JA",
+              "content": "Saikyou no Shien-shoku \"Wajutsushi\" Dearu ore wa Sekai Saikyou Kuran o Shitagaeru",
+              "__typename": "I18nTitle"
+            },
+            "titles": [
+              {
+                "lang": "EN",
+                "content": "The Most Notorious \"Talker\" Runs the World's Greatest Clan",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "RU",
+                "content": "Самый известный диктор создаёт самый великий в мире клан",
+                "__typename": "I18nTitle"
+              },
+              {
+                "lang": "JA",
+                "content": "最凶の支援職【話術士】である俺は世界最強クランを従える",
+                "__typename": "I18nTitle"
+              }
+            ],
+            "status": "ONGOING",
+            "type": "MANGA",
+            "formats": [],
+            "rating": "QUESTIONABLE",
+            "score": 8.920000076293945,
+            "containExplicitThemes": false,
+            "cover": {
+              "id": "SU1BR0U6NjI1Nzk3NjAyNTI4NzEwNjE",
+              "blurhash": "TTH-P-sAR-0KofWqo~WB-V4.js-V",
+              "original": {
+                "height": 1000,
+                "width": 700,
+                "url": "https://mirai.senkuro.net/manga/59254041716220317/covers/262a75158648841ca6463a4e3e39995e9640ab85_62579760252871061.jpeg",
+                "__typename": "ImageSize"
+              },
+              "preview": {
+                "url": "https://shiro.senkuro.net/aNFx6R6_SNm7OggM8TcMQUz4RKeilLazNEKinnRIVOo/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81OTI1NDA0MTcxNjIyMDMxNy9jb3ZlcnMvMjYyYTc1MTU4NjQ4ODQxY2E2NDYzYTRlM2UzOTk5NWU5NjQwYWI4NV82MjU3OTc2MDI1Mjg3MTA2MS5qcGVn.jpeg",
+                "__typename": "ImageSize"
+              },
+              "__typename": "Image"
+            },
+            "viewerBookmark": null,
+            "__typename": "Manga",
+            "translitionStatus": "IN_PROGRESS",
+            "lastChapters": [
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTQ2NzE1NTY5OTM4OTM5MTQ",
+                "slug": "214671556993893914",
+                "number": "61.3",
+                "volume": "10",
+                "name": null,
+                "createdAt": "2026-01-20T22:50:18.982319",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTM4MDI4MzE0NzQzNDU0OTg",
+                "slug": "213802831474345498",
+                "number": "61.2",
+                "volume": "10",
+                "name": null,
+                "createdAt": "2026-01-14T23:00:18.225903",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMTIyODM1MTE5MjU2NTUwNjY",
+                "slug": "212283511925655066",
+                "number": "61.1",
+                "volume": "10",
+                "name": null,
+                "createdAt": "2026-01-04T11:27:13.206487",
+                "__typename": "MangaChapter"
+              },
+              {
+                "id": "TUFOR0FfQ0hBUFRFUjoyMDk2MzQwNTEzNTc2ODkzNzA",
+                "slug": "209634051357689370",
+                "number": "60.2",
+                "volume": "10",
+                "name": null,
+                "createdAt": "2025-12-17T04:47:11.648801",
+                "__typename": "MangaChapter"
+              }
+            ],
+            "isLicensed": false,
+            "viewerInBlockedCountry": false
+          },
+          "__typename": "MangaEdge"
+        }
+      ],
+      "__typename": "MangaConnection"
+    }
+  }
+}

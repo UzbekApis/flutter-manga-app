@@ -1,0 +1,572 @@
+{
+  "data": {
+    "mangaPopularByPeriod": [
+      {
+        "id": "TUFOR0E6MTA1OTMwMjg2MjM1MTQ4Njky",
+        "slug": "reincarnator",
+        "originalName": {
+          "lang": "JA",
+          "content": "Reincarnator",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Реинкарнатор",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 8.90999984741211,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTEwNTg0MDYzODczNTMzNDY4",
+          "blurhash": "TEEMX:I8Tx.TROx_N1xv9E%3xv4n",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/105930286235148692/covers/7d568080654e0d1fae4115e3629292c987106ff4_110584063873533468.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/Yodra0OletPjgjrMjfqAMxB5hmvEeG4Dzwiv4NoW-YE/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xMDU5MzAyODYyMzUxNDg2OTIvY292ZXJzLzdkNTY4MDgwNjU0ZTBkMWZhZTQxMTVlMzYyOTI5MmM5ODcxMDZmZjRfMTEwNTg0MDYzODczNTMzNDY4LmpwZWc.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6NDA1Njc3Mzg2NzM5NDcwNTc",
+        "slug": "singwa-hamkke-lebel-eob",
+        "originalName": {
+          "lang": "JA",
+          "content": "Singwa hamkke lebel-eob",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "EN",
+            "content": "Level Up with the Gods",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "RU",
+            "content": "Поднятие уровня с богами",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "JA",
+            "content": "신과 함께 레벨업",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 9.199999809265137,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6NTM3ODc4NTIyOTA0MTcwODM",
+          "blurhash": "TeKmOr_MS0=DRiSh9aIBWDT1jwRk",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/40567738673947057/covers/18f8d43fb2ef897a371eee7a37350e594741f742_53787852290417083.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/7CpVT24XffyxZzaKuNDlqZW5Fcy82QgC5UvH8iJp8f8/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80MDU2NzczODY3Mzk0NzA1Ny9jb3ZlcnMvMThmOGQ0M2ZiMmVmODk3YTM3MWVlZTdhMzczNTBlNTk0NzQxZjc0Ml81Mzc4Nzg1MjI5MDQxNzA4My5qcGVn.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6OTI1MjgwMDA0NzM1MjI2MTY",
+        "slug": "star-fostered-swordmaster",
+        "originalName": {
+          "lang": "JA",
+          "content": "Star-Fostered Swordmaster",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "EN",
+            "content": "The Stellar Swordmaster",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "RU",
+            "content": "Мастер меча, охватывающий звёзды",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "JA",
+            "content": "별을 품은 소드마스터",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "SENSITIVE",
+        "score": 9.5600004196167,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MjE0MjQyMjAyNDM0NDIyMjc0",
+          "blurhash": "TUJkyO-=4o~Ut7E1NHWYIAD*IVRP",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/92528000473522616/covers/c003ba4df611c8bb2bd3424da197e6a3ce092d8f_214242202434422274.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/qWuHy5NWwI3lFYxr2-b8XZvpIyZdMfo_WRw9NPtBGf0/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS85MjUyODAwMDQ3MzUyMjYxNi9jb3ZlcnMvYzAwM2JhNGRmNjExYzhiYjJiZDM0MjRkYTE5N2U2YTNjZTA5MmQ4Zl8yMTQyNDIyMDI0MzQ0MjIyNzQuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6Njk5NTE3NjgyMTcyODA5MDY",
+        "slug": "wo-tianming-dafanpai",
+        "originalName": {
+          "lang": "JA",
+          "content": "Wo! Tianming Dafanpai",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Моя судьба злодея",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHUA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 9.350000381469727,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MjA5NTg2MDc1OTE4NjgxNjAy",
+          "blurhash": "TeHwKAbI0eIcNaxa9aR%t7xIxWxY",
+          "original": {
+            "height": 999,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/69951768217280906/covers/87ef9a3e41a3e66e18be1ef80797008b217c8fec_209586075918681602.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/SBzWOeTzNnUuogVwCIWMuoGA1VaTlJOMHZr6yO-1s40/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS82OTk1MTc2ODIxNzI4MDkwNi9jb3ZlcnMvODdlZjlhM2U0MWEzZTY2ZTE4YmUxZWY4MDc5NzAwOGIyMTdjOGZlY18yMDk1ODYwNzU5MTg2ODE2MDIuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6NDYzNTcwNzg2MDM3NTE4Mzg",
+        "slug": "wu-lian-dian-feng",
+        "originalName": {
+          "lang": "ZH",
+          "content": "Wu Lian Dian Feng",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Пик боевых искусств",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHUA",
+        "formats": [
+          "IN_COLOR",
+          "WEBTOON",
+          "WEB"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 8.520000457763672,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6NDczNzkyNDI3MTkxNDIzMzI",
+          "blurhash": "TQFrbGIVR5s:afoJ01oybv^%M|Ip",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/46357078603751838/covers/75f10d1d7b34172a1d03e3962482204b6541b6a6_47379242719142332.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/iC7zDaQobE3MMRjmJhZA-RbKDmSzLXNUj9FZ0-QYlXw/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS80NjM1NzA3ODYwMzc1MTgzOC9jb3ZlcnMvNzVmMTBkMWQ3YjM0MTcyYTFkMDNlMzk2MjQ4MjIwNGI2NTQxYjZhNl80NzM3OTI0MjcxOTE0MjMzMi5qcGVn.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6ODMxNDM0NzQxMzE1MjYwNTM",
+        "slug": "necromancer-s-evolutionary-traits",
+        "originalName": {
+          "lang": "JA",
+          "content": "Necromancer’s Evolutionary Traits",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Эволюционные черты некроманта",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 9.15999984741211,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTAwNTgzMjI2NDAxMTIwNjgz",
+          "blurhash": "TGDTI{~WFzu6?F?bv|-lt6?IXnRi",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/83143474131526053/covers/c9748446c7bd2b3a8528cfb05ba97ee6203a6d5c_100583226401120683.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/ENM0CbZnI0u45XJrqzfF4OEwNh1q1PO8uokse_isBck/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS84MzE0MzQ3NDEzMTUyNjA1My9jb3ZlcnMvYzk3NDg0NDZjN2JkMmIzYTg1MjhjZmIwNWJhOTdlZTYyMDNhNmQ1Y18xMDA1ODMyMjY0MDExMjA2ODMuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6NTc0NzQyMDQyODI0MTM0NDY",
+        "slug": "segye-choegoui-enjinieo",
+        "originalName": {
+          "lang": "KO",
+          "content": "Segye choegoui enjinieo",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "EN",
+            "content": "The Greatest Estate Developer",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "RU",
+            "content": "Система всемогущего дизайнера",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "JA",
+            "content": "역대급 영지 설계사",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "FINISHED",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "SENSITIVE",
+        "score": 9.800000190734863,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTgxNTYzNjMwNDMxNTIwMjcx",
+          "blurhash": "TTJk1DwfD%T0tQWB01yDNGIAMyoz",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/57474204282413446/covers/2bc0e0a04362222b86bdd9c967ba6de1914d0c66_181563630431520271.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/1kWpH-h8N0wFQkrO80R6cYWPzwYM60yY3f4Zl48BTR0/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81NzQ3NDIwNDI4MjQxMzQ0Ni9jb3ZlcnMvMmJjMGUwYTA0MzYyMjIyYjg2YmRkOWM5NjdiYTZkZTE5MTRkMGM2Nl8xODE1NjM2MzA0MzE1MjAyNzEuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6Mzk2NjgzODk2Njg0NzkzNzI",
+        "slug": "musingwihwanlog",
+        "originalName": {
+          "lang": "JA",
+          "content": "Musingwihwanlog",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "EN",
+            "content": "Return of the War God",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "RU",
+            "content": "Возвращение еретика",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "JA",
+            "content": "무신귀환록",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "SENSITIVE",
+        "score": 9.0,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MjAyMTIyMzA1NzI2MzM0NTAw",
+          "blurhash": "TjNS81~oyCM_ofoLxZs.bIwfWBt6",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/39668389668479372/covers/f17b1f3239855d8de66a32fc03e3a8bf785a3f9f_202122305726334500.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/7I5UMOZerZIrrwV9FAOXUq8OUA0uQ5Yo9COwwCbo1rU/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8zOTY2ODM4OTY2ODQ3OTM3Mi9jb3ZlcnMvZjE3YjFmMzIzOTg1NWQ4ZGU2NmEzMmZjMDNlM2E4YmY3ODVhM2Y5Zl8yMDIxMjIzMDU3MjYzMzQ1MDAuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6MTczMjY0NzI1OTYwODM4MzY1",
+        "slug": "wireless-connection-onahole",
+        "originalName": {
+          "lang": "JA",
+          "content": "Wireless Connection Onahole",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Беспроводной мастурбатор",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "EXPLICIT",
+        "score": 9.260000228881836,
+        "containExplicitThemes": true,
+        "cover": {
+          "id": "SU1BR0U6MTk2MDc2NjE5MDYyODU1MjE2",
+          "blurhash": "TYIN{xIV0KNZS1%2rrf+%MI.oy%2",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/173264725960838365/covers/0dafd050eddce06830932779b979006d154d705c_196076619062855216.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/ZtLMvcRO_OCTj8IrpzKcSyo-2Dk1z4wrBX5zDRg5_vM/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNzMyNjQ3MjU5NjA4MzgzNjUvY292ZXJzLzBkYWZkMDUwZWRkY2UwNjgzMDkzMjc3OWI5NzkwMDZkMTU0ZDcwNWNfMTk2MDc2NjE5MDYyODU1MjE2LmpwZWc.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6MTY1NTE2OTM3MjgxOTQ4OTEx",
+        "slug": "god-level-assassin-i-m-the-shadow",
+        "originalName": {
+          "lang": "JA",
+          "content": "God-Level Assassin, I'm the Shadow",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Божественный убийца, Я - Тень",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHUA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "EXPLICIT",
+        "score": 8.880000114440918,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTY1NTE3MDU2NjM1MDcyODQ1",
+          "blurhash": "TVC7Q].AXStOyEjbD#M^t7t9R+bI",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/165516937281948911/covers/1d8983d6805ecaf559ba21304683e6c2367cdd74_165517056635072845.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/H99xUGFdTQziP_RARJHRINMP_TmukIX3JUI5y6S8doc/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xNjU1MTY5MzcyODE5NDg5MTEvY292ZXJzLzFkODk4M2Q2ODA1ZWNhZjU1OWJhMjEzMDQ2ODNlNmMyMzY3Y2RkNzRfMTY1NTE3MDU2NjM1MDcyODQ1LmpwZWc.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6MTg4OTI2MTU0NDUzODI5MTU1",
+        "slug": "full-time-awakening",
+        "originalName": {
+          "lang": "JA",
+          "content": "Full-Time Awakening",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "RU",
+            "content": "Постоянное пробуждение",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHUA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 8.579999923706055,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTg4OTI2MjQ0NTY0MjU2Mjg4",
+          "blurhash": "TMEz+X8^_3-;R5i_8wX8kWDOX8E1",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/188926154453829155/covers/115173427a6abb8cb2357ec04b17b353e6fe38b6_188926244564256288.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/0gc7SnVzXvYZ7KZczU0QWP-LUfS3uXDh9lXqbSNnjgM/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS8xODg5MjYxNTQ0NTM4MjkxNTUvY292ZXJzLzExNTE3MzQyN2E2YWJiOGNiMjM1N2VjMDRiMTdiMzUzZTZmZTM4YjZfMTg4OTI2MjQ0NTY0MjU2Mjg4LmpwZWc.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      },
+      {
+        "id": "TUFOR0E6NTI5MTM1NjU4NjE5NjIxNDQ",
+        "slug": "nano-machine",
+        "originalName": {
+          "lang": "EN",
+          "content": "Nano Machine",
+          "__typename": "I18nTitle"
+        },
+        "titles": [
+          {
+            "lang": "EN",
+            "content": "Nano Machine",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "RU",
+            "content": "Наномашины",
+            "__typename": "I18nTitle"
+          },
+          {
+            "lang": "JA",
+            "content": "나노마신",
+            "__typename": "I18nTitle"
+          }
+        ],
+        "status": "ONGOING",
+        "type": "MANHWA",
+        "formats": [
+          "IN_COLOR",
+          "WEB",
+          "WEBTOON"
+        ],
+        "rating": "QUESTIONABLE",
+        "score": 9.529999732971191,
+        "containExplicitThemes": false,
+        "cover": {
+          "id": "SU1BR0U6MTY3NDAxNjg0MzU4Njg5MTAx",
+          "blurhash": "TWFE_=jE0eTebHbaI:M|xtWCNGoJ",
+          "original": {
+            "height": 1000,
+            "width": 700,
+            "url": "https://mirai.senkuro.net/manga/52913565861962144/covers/e6ba0fd8b9bb6ff196504ff9c08633f7a29e8ed1_167401684358689101.jpeg",
+            "__typename": "ImageSize"
+          },
+          "preview": {
+            "url": "https://shiro.senkuro.net/LwWIp7dkJVHFaBLV8IZPFTTDwQis4j9YRYahGT9Kt94/rs:fit:175:250/aHR0cHM6Ly9taXJhaS5zZW5rdXJvLm5ldC9tYW5nYS81MjkxMzU2NTg2MTk2MjE0NC9jb3ZlcnMvZTZiYTBmZDhiOWJiNmZmMTk2NTA0ZmY5YzA4NjMzZjdhMjllOGVkMV8xNjc0MDE2ODQzNTg2ODkxMDEuanBlZw.jpeg",
+            "__typename": "ImageSize"
+          },
+          "__typename": "Image"
+        },
+        "viewerBookmark": null,
+        "__typename": "Manga"
+      }
+    ]
+  }
+}

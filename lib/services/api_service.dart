@@ -121,7 +121,8 @@ class ApiService {
 
     try {
       final data = await _post(payload);
-      final mangas = data['data']['popularMangaByPeriod'] as List;
+      // API javobida 'mangaPopularByPeriod' ishlatiladi
+      final mangas = data['data']['mangaPopularByPeriod'] as List;
       return mangas.map((m) => Manga.fromJson(m)).toList();
     } catch (e) {
       print('Popular manga error: $e');

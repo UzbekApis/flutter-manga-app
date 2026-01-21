@@ -1,11 +1,14 @@
 import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'dart:io';
+import 'dart:async';
 
 class ProxyService {
   static bool _isEnabled = false;
   static String? _currentProxy;
   static final Random _random = Random();
+  static Timer? _rotationTimer;
+  static DateTime? _lastRotation;
   
   // Ruscha bepul proxy ro'yxati
   static final List<String> _russianProxies = [
@@ -38,24 +41,50 @@ class ProxyService {
   static void enable() {
     _isEnabled = true;
     _selectRandomProxy();
+    _startRotationTimer();
   }
   
   // Proxy o'chirish
   static void disable() {
     _isEnabled = false;
     _currentProxy = null;
+    _stopRotationTimer();
+  }
+  
+  // Timer boshlash - har 2-3 sekundda almashtirish
+  static void _startRotationTimer() {
+    _stopRotationTimer();
+    _rotationTimer = Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (_isEnabled) {
+        _selectRandomProxy();
+        print('Proxy rotated: $_currentProxy');
+      }
+    });
+  }
+  
+  // Timer to'xtatish
+  static void _stopRotationTimer() {
+    _rotationTimer?.cancel();
+    _rotationTimer = null;
   }
   
   // Random proxy tanlash
   static void _selectRandomProxy() {
     if (_russianProxies.isEmpty) return;
     _currentProxy = _russianProxies[_random.nextInt(_russianProxies.length)];
+    _lastRotation = DateTime.now();
   }
   
-  // Har bir so'rovda yangi proxy
+  // Har bir so'rovda yangi proxy (agar 2 sekunddan ko'p vaqt o'tgan bo'lsa)
   static String? getRandomProxy() {
     if (!_isEnabled || _russianProxies.isEmpty) return null;
-    _selectRandomProxy();
+    
+    // Agar oxirgi almashtirishdan 2 sekund o'tgan bo'lsa, yangi proxy
+    if (_lastRotation == null || 
+        DateTime.now().difference(_lastRotation!).inSeconds >= 2) {
+      _selectRandomProxy();
+    }
+    
     return _currentProxy;
   }
   
