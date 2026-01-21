@@ -27,22 +27,20 @@ class Manga {
       }
     }
 
+    // Inglizcha nomni olish (ruscha emas)
     String name = json['originalName'] ?? 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
+      // Avval inglizcha qidirish
       for (var title in titles) {
-        if (title['lang'] == 'RU') {
+        if (title['lang'] == 'EN') {
           name = title['content'];
           break;
         }
       }
-      if (name == json['originalName']) {
-        for (var title in titles) {
-          if (title['lang'] == 'EN') {
-            name = title['content'];
-            break;
-          }
-        }
+      // Agar inglizcha bo'lmasa, original nomni olish
+      if (name == json['originalName'] && titles.isNotEmpty) {
+        name = titles.first['content'] ?? name;
       }
     }
 
@@ -83,22 +81,28 @@ class MangaDetail {
       coverUrl = json['cover']['original']['url'];
     }
 
+    // Inglizcha nomni olish
     String name = json['originalName']?['content'] ?? 'Unknown';
     if (json['titles'] != null) {
       final titles = json['titles'] as List;
       for (var title in titles) {
-        if (title['lang'] == 'RU') {
+        if (title['lang'] == 'EN') {
           name = title['content'];
           break;
         }
       }
+      // Agar inglizcha bo'lmasa, original nomni olish
+      if (name == json['originalName']?['content'] && titles.isNotEmpty) {
+        name = titles.first['content'] ?? name;
+      }
     }
 
+    // Inglizcha tavsifni olish
     String? description;
     if (json['localizations'] != null) {
       final locs = json['localizations'] as List;
       for (var loc in locs) {
-        if (loc['lang'] == 'RU' && loc['description'] != null) {
+        if (loc['lang'] == 'EN' && loc['description'] != null) {
           final desc = loc['description'] as List;
           final parts = <String>[];
           for (var block in desc) {

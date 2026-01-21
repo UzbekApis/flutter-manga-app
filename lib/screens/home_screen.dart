@@ -4,6 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../providers/manga_provider.dart';
 import 'manga_detail_screen.dart';
 import 'downloads_screen.dart';
+import 'favorites_screen.dart';
+import 'reading_list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,13 +18,89 @@ class _HomeScreenState extends State<HomeScreen> {
   final _searchController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    // Yangi chapterlarni tekshirish
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _checkForNewChapters();
+    });
+  }
+
+  Future<void> _checkForNewChapters() async {
+    final provider = context.read<MangaProvider>();
+    await provider.checkForNewChapters();
+    
+    if (provider.newChaptersNotifications.isNotEmpty && mounted) {
+      _showNewChaptersDialog();
+    }
+  }
+
+  void _showNewChaptersDialog() {
+    final provider = context.read<MangaProvider>();
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('🎉 Yangi chapterlar!'),
+        content: SizedBox(
+          width: double.maxFinite,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: provider.newChaptersNotifications.length,
+            itemBuilder: (context, index) {
+              final notification = provider.newChaptersNotifications[index];
+              return ListTile(
+                leading: const Icon(Icons.new_releases, color: Colors.orange),
+                title: Text(notification['mangaName'] as String),
+                subtitle: Text(
+                  '+${notification['newChapters']} ta yangi chapter',
+                  style: const TextStyle(color: Colors.orange),
+                ),
+              );
+            },
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              provider.clearNewChaptersNotifications();
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Manga Reader'),
         actions: [
           IconButton(
+            icon: const Icon(Icons.favorite),
+            tooltip: 'Sevimlilar',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const FavoritesScreen()),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu_book),
+            tooltip: 'O\'qiyotganlar',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const ReadingListScreen()),
+              );
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.download),
+            tooltip: 'Yuklab olinganlar',
             onPressed: () {
               Navigator.push(
                 context,
@@ -115,7 +193,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => MangaDetailScreen(manga: manga),
+                            builder: (_) => MangaDetailScreen(
+                              mangaSlug: manga.slug,
+                              mangaId: manga.id,
+                            ),
                           ),
                         );
                       },

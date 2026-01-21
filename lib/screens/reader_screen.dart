@@ -1,18 +1,32 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../models/chapter.dart';
 import '../services/api_service.dart';
 import '../services/download_service.dart';
+import '../providers/manga_provider.dart';
 
 class ReaderScreen extends StatefulWidget {
   final String chapterSlug;
   final String chapterNumber;
+  final int initialPage;
+  final String? mangaId;
+  final String? mangaSlug;
+  final String? mangaName;
+  final String? mangaCoverUrl;
+  final int? totalChapters;
 
   const ReaderScreen({
     super.key,
     required this.chapterSlug,
     required this.chapterNumber,
+    this.initialPage = 0,
+    this.mangaId,
+    this.mangaSlug,
+    this.mangaName,
+    this.mangaCoverUrl,
+    this.totalChapters,
   });
 
   @override
@@ -26,13 +40,47 @@ class _ReaderScreenState extends State<ReaderScreen> {
   bool _isOffline = false;
   bool _isDownloading = false;
   double _downloadProgress = 0;
+  int _currentPage = 0;
 
   final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
+    _currentPage = widget.initialPage;
     _loadChapter();
+    _scrollController.addListener(_onScroll);
+  }
+
+  void _onScroll() {
+    if (_images.isEmpty) return;
+    
+    // Hozirgi sahifani aniqlash
+    final screenHeight = MediaQuery.of(context).size.height;
+    final scrollPosition = _scrollController.offset;
+    final newPage = (scrollPosition / screenHeight).floor();
+    
+    if (newPage != _currentPage && newPage >= 0 && newPage < _images.length) {
+      setState(() {
+        _currentPage = newPage;
+      });
+      _saveProgress();
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
+      await context.read<MangaProvider>().updateReadingProgress(
+        widget.mangaId!,
+        widget.mangaSlug!,
+        widget.mangaName!,
+        widget.mangaCoverUrl,
+        widget.chapterSlug,
+        widget.chapterNumber,
+        _currentPage,
+        widget.totalChapters ?? 0,
+      );
+    }
   }
 
   Future<void> _loadChapter() async {
@@ -45,6 +93,14 @@ class _ReaderScreenState extends State<ReaderScreen> {
         _isOffline = true;
         _isLoading = false;
       });
+      
+      // Boshlang'ich sahifaga o'tish
+      if (widget.initialPage > 0) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          final screenHeight = MediaQuery.of(context).size.height;
+          _scrollController.jumpTo(widget.initialPage * screenHeight);
+        });
+      }
       return;
     }
 
@@ -56,6 +112,14 @@ class _ReaderScreenState extends State<ReaderScreen> {
         _images = chapter.imageUrls;
         _isLoading = false;
       });
+      
+      // Boshlang'ich sahifaga o'tish
+      if (widget.initialPage > 0) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          final screenHeight = MediaQuery.of(context).size.height;
+          _scrollController.jumpTo(widget.initialPage * screenHeight);
+        });
+      }
     }
   }
 
@@ -67,15 +131,33 @@ class _ReaderScreenState extends State<ReaderScreen> {
       _downloadProgress = 0;
     });
 
-    await DownloadService.downloadChapter(
-      widget.chapterSlug,
-      _chapter!.imageUrls,
-      (current, total) {
-        setState(() {
-          _downloadProgress = current / total;
-        });
-      },
-    );
+    if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
+      await context.read<MangaProvider>().downloadChapter(
+        widget.mangaId!,
+        widget.mangaSlug!,
+        widget.mangaName!,
+        widget.mangaCoverUrl,
+        widget.chapterSlug,
+        widget.chapterNumber,
+        null,
+        _chapter!.imageUrls,
+        (current, total) {
+          setState(() {
+            _downloadProgress = current / total;
+          });
+        },
+      );
+    } else {
+      await DownloadService.downloadChapter(
+        widget.chapterSlug,
+        _chapter!.imageUrls,
+        (current, total) {
+          setState(() {
+            _downloadProgress = current / total;
+          });
+        },
+      );
+    }
 
     setState(() {
       _isDownloading = false;
@@ -95,6 +177,16 @@ class _ReaderScreenState extends State<ReaderScreen> {
       appBar: AppBar(
         title: Text('Chapter ${widget.chapterNumber}'),
         actions: [
+          if (_images.isNotEmpty)
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text(
+                  '${_currentPage + 1}/${_images.length}',
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
           if (!_isOffline && !_isDownloading && _chapter != null)
             IconButton(
               icon: const Icon(Icons.download),
@@ -171,6 +263,11 @@ class _ReaderScreenState extends State<ReaderScreen> {
                     builder: (_) => ReaderScreen(
                       chapterSlug: _chapter!.prevSlug!,
                       chapterNumber: (int.parse(widget.chapterNumber) - 1).toString(),
+                      mangaId: widget.mangaId,
+                      mangaSlug: widget.mangaSlug,
+                      mangaName: widget.mangaName,
+                      mangaCoverUrl: widget.mangaCoverUrl,
+                      totalChapters: widget.totalChapters,
                     ),
                   ),
                 );
@@ -189,6 +286,11 @@ class _ReaderScreenState extends State<ReaderScreen> {
                     builder: (_) => ReaderScreen(
                       chapterSlug: _chapter!.nextSlug!,
                       chapterNumber: (int.parse(widget.chapterNumber) + 1).toString(),
+                      mangaId: widget.mangaId,
+                      mangaSlug: widget.mangaSlug,
+                      mangaName: widget.mangaName,
+                      mangaCoverUrl: widget.mangaCoverUrl,
+                      totalChapters: widget.totalChapters,
                     ),
                   ),
                 );
@@ -202,6 +304,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
   @override
   void dispose() {
+    _saveProgress();
     _scrollController.dispose();
     super.dispose();
   }

@@ -1,153 +1,124 @@
-# 📱 Flutter Manga Reader
+# Manga Reader - To'liq Funksional Ilova
 
-Senkuro.me saytidan manga o'qish uchun Flutter ilovasi.
+Flutter yordamida yaratilgan professional manga o'qish ilovasi.
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Android-brightgreen.svg)](https://www.android.com/)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UzbekApis/flutter-manga-app/blob/main/Flutter_Manga_App_Builder.ipynb)
+## ✨ Asosiy Funksiyalar
 
-## ✨ Xususiyatlar
+### 📚 Manga Boshqaruvi
+- **Qidirish**: Minglab manga va manhvalarni qidiring
+- **Batafsil Ma'lumot**: Har bir manga haqida to'liq ma'lumot
+- **Inglizcha Interfeys**: Ruscha so'zlar o'rniga inglizcha nomlar
 
-- 🔍 **Qidirish** - Manga qidirish (ruscha/inglizcha)
-- 📖 **Online o'qish** - To'g'ridan-to'g'ri Senkuro API orqali
-- 💾 **Offline o'qish** - Chapterlarni yuklab olish
-- 📜 **Vertikal scroll** - Pastdan yuqoriga o'qish
-- 🖼️ **Auto-fit** - Rasmlar ekranga moslashadi
-- ⚡ **Cache** - Tez yuklash uchun (CachedNetworkImage)
-- 🌙 **Dark mode** - Qorong'i tema
-- 🛡️ **Xatoliklar** - Yaxshilangan xatoliklar bilan ishlash
+### ❤️ Sevimlilar
+- Yoqqan mangalarni sevimlilar ro'yxatiga qo'shing
+- Tez kirish uchun alohida sahifa
+- Chiroyli grid ko'rinish
 
-## 📸 Screenshots
+### 📖 O'qiyotganlar
+- Oxirgi o'qilgan joyni avtomatik saqlash
+- Qayerda qolganingizni aniq ko'rsatish
+- "Davom etish" tugmasi bilan tezkor kirish
+- Har bir manga uchun progress tracking
 
-<p align="center">
-  <img src="screenshots/home.png" width="200" />
-  <img src="screenshots/search.png" width="200" />
-  <img src="screenshots/reader.png" width="200" />
-</p>
+### 💾 Yuklab Olish
+- **Bitta Chapter**: Istalgan chapterni yuklab oling
+- **Ko'plab Chapterlar**: Bir nechta chapterni tanlang va yuklab oling
+- **Hammasini Yuklab Olish**: Barcha chapterlarni bir bosishda yuklab oling
+- **Offline O'qish**: Internetisz o'qing
+- **Yuklab Olinganlar Sahifasi**: 
+  - Manga rasmi va nomi
+  - Nechta chapter yuklangani
+  - Har bir chapterning sahifa soni
+  - Tez o'chirish imkoniyati
 
-## 🚀 Google Colab'da Build qilish (TAVSIYA ETILADI)
+### 🔔 Yangi Chapterlar Haqida Xabar
+- Siz ko'rgan va saqlab qo'ygan mangalarga yangi chapter qo'shilsa avtomatik xabar
+- Ilova ochilganda tekshirish
+- Qancha yangi chapter qo'shilganini ko'rsatish
 
-Eng ishonchli va oson usul bu **Google Colab** yordamida build qilishdir.
+### 📱 Chiroyli Interfeys
+- **Dark Mode**: Ko'zni charchatmaydigan qora tema
+- **Gradient Ranglar**: Zamonaviy dizayn
+- **Animatsiyalar**: Silliq o'tishlar
+- **Responsive**: Har qanday ekran o'lchamiga moslashadi
 
-👉 **[COLAB_FINAL.md](COLAB_FINAL.md)** faylida to'liq va yangilangan yo'riqnoma mavjud.
+### 📊 O'qish Tajribasi
+- Sahifa raqamini ko'rsatish (masalan: 5/34)
+- Avtomatik progress saqlash
+- Keyingi/oldingi chapterga o'tish
+- Offline yuklab olingan chapterlarni ko'rsatish
 
-### Qisqacha:
-1. [Google Colab](https://colab.research.google.com/) oching
-2. [COLAB_FINAL.md](COLAB_FINAL.md) dagi kodni nusxalang
-3. Ishga tushiring va 20 daqiqa kuting
-4. APK tayyor!
-
-## 💻 Lokal Build
+## 🚀 O'rnatish
 
 ```bash
-# Clone
-git clone https://github.com/UzbekApis/flutter-manga-app.git
-cd flutter-manga-app
-
-# Dependencies
+# Dependencies o'rnatish
 flutter pub get
 
-# Run
+# Ilovani ishga tushirish
 flutter run
-
-# Build APK
-flutter build apk --release
 ```
 
-## 📦 Dependencies
+## 📦 Ishlatilgan Paketlar
 
-```yaml
-dependencies:
-  http: ^1.1.0              # API so'rovlar
-  provider: ^6.1.1          # State management
-  sqflite: ^2.3.0           # Local database
-  path_provider: ^2.1.1     # File paths
-  cached_network_image: ^3.3.0  # Image cache
-  photo_view: ^0.14.0       # Image viewer
-  dio: ^5.4.0               # Downloads
-  permission_handler: ^11.1.0   # Permissions
-  flutter_spinkit: ^5.2.0   # Loading indicators
-```
+- `provider` - State management
+- `sqflite` - Local database
+- `cached_network_image` - Rasm cache
+- `dio` - Yuklab olish
+- `http` - API so'rovlar
+- `path_provider` - Fayl yo'llari
 
-## 🏗️ Arxitektura
+## 🎯 Texnik Xususiyatlar
 
-```
-lib/
-├── main.dart                 # Entry point
-├── models/                   # Data models
-│   ├── manga.dart
-│   └── chapter.dart
-├── providers/                # State management
-│   └── manga_provider.dart
-├── services/                 # Business logic
-│   ├── api_service.dart      # Senkuro API
-│   └── download_service.dart # Offline storage
-└── screens/                  # UI screens
-    ├── home_screen.dart
-    ├── manga_detail_screen.dart
-    ├── reader_screen.dart
-    └── downloads_screen.dart
-```
+### Database
+- SQLite yordamida local ma'lumotlar saqlash
+- 4 ta jadval:
+  - `favorites` - Sevimlilar
+  - `reading` - O'qiyotganlar va progress
+  - `downloads` - Yuklab olinganlar
+  - `manga_tracking` - Yangi chapterlar kuzatuvi
 
-## 🔌 API
+### API
+- Senkuro API integratsiyasi
+- GraphQL so'rovlar
+- Xatoliklarni boshqarish
+- Timeout va retry mexanizmi
 
-Ilova to'g'ridan-to'g'ri Senkuro GraphQL API bilan ishlaydi:
+### Offline Funksiyalar
+- Chapterlarni local saqlash
+- Offline o'qish imkoniyati
+- Yuklab olingan rasmlarni cache qilish
 
-- **Base URL**: `https://api.senkuro.me/graphql`
-- **Operations**: 
-  - `search` - Manga qidirish
-  - `fetchManga` - Manga ma'lumotlari
-  - `fetchMangaChapters` - Chapterlar ro'yxati
-  - `fetchMangaChapter` - Chapter rasmlar
+## 📱 Ekranlar
 
-## 📱 Foydalanish
+1. **Home Screen** - Qidirish va asosiy menyu
+2. **Manga Detail** - Batafsil ma'lumot va chapterlar
+3. **Reader Screen** - Manga o'qish
+4. **Favorites** - Sevimlilar ro'yxati
+5. **Reading List** - O'qiyotganlar
+6. **Downloads** - Yuklab olinganlar
 
-1. **Qidirish**: Qidiruv maydoniga manga nomini kiriting
-2. **Tanlash**: Manga tanlang va chapterlar ro'yxatini ko'ring
-3. **O'qish**: Chapterni bosing va o'qishni boshlang
-4. **Yuklab olish**: Reader ekranida download tugmasini bosing
-5. **Offline**: Downloads bo'limidan yuklab olingan chapterlarni oching
+## 🎨 Dizayn Xususiyatlari
 
-## 🐛 Muammolar
+- Material Design 3
+- Dark theme
+- Gradient colors
+- Smooth animations
+- Responsive layout
+- Custom widgets
 
-### 503 Service Unavailable
-- Senkuro serveri vaqtincha band
-- Bir necha daqiqa kutib qayta urinib ko'ring
+## 🔧 Kelajakda Qo'shilishi Mumkin
 
-### Yuklab olish ishlamayapti
-- Storage permission tekshiring
-- Settings → Apps → Manga Reader → Permissions
-
-### Rasmlar yuklanmayapti
-- Internet ulanishini tekshiring
-- Cache'ni tozalang
-
-## 🤝 Hissa qo'shish
-
-Pull request'lar xush kelibsiz! Katta o'zgarishlar uchun avval issue oching.
-
-1. Fork qiling
-2. Feature branch yarating (`git checkout -b feature/AmazingFeature`)
-3. Commit qiling (`git commit -m 'Add some AmazingFeature'`)
-4. Push qiling (`git push origin feature/AmazingFeature`)
-5. Pull Request oching
+- [ ] Tilni o'zgartirish (O'zbek, Ingliz, Rus)
+- [ ] Yorug' tema
+- [ ] Izohlar va reytinglar
+- [ ] Manga tavsiyalari
+- [ ] Qidirish filtrlari
+- [ ] Sozlamalar sahifasi
 
 ## 📄 Litsenziya
 
-[MIT License](LICENSE)
+MIT License
 
 ## 👨‍💻 Muallif
 
-**UzbekApis**
-- GitHub: [@UzbekApis](https://github.com/UzbekApis)
-
-## 🙏 Minnatdorchilik
-
-- [Senkuro.me](https://senkuro.me) - Manga ma'lumotlari uchun
-- [Flutter](https://flutter.dev) - Framework
-- Barcha contributors'larga
-
----
-
-<p align="center">Made with ❤️ by UzbekApis</p>
+Flutter Manga Reader - Professional manga o'qish tajribasi uchun yaratilgan.
