@@ -73,9 +73,22 @@ class DatabaseService {
         ''');
       },
       onUpgrade: (db, oldVersion, newVersion) async {
-        if (oldVersion < 2) {
-          // scrollOffset ustunini qo'shish
-          await db.execute('ALTER TABLE reading ADD COLUMN scrollOffset REAL DEFAULT 0.0');
+        try {
+          if (oldVersion < 2) {
+            // Check if column already exists
+            final result = await db.rawQuery('PRAGMA table_info(reading)');
+            final hasScrollOffset = result.any((col) => col['name'] == 'scrollOffset');
+            
+            if (!hasScrollOffset) {
+              await db.execute('ALTER TABLE reading ADD COLUMN scrollOffset REAL DEFAULT 0.0');
+              print('Database upgraded: scrollOffset column added');
+            } else {
+              print('Database upgrade skipped: scrollOffset column already exists');
+            }
+          }
+        } catch (e) {
+          print('Migration error: $e');
+          // Don't throw - let app continue with old schema
         }
       },
     );

@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:async';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import '../models/manga.dart';
 import '../models/chapter.dart';
@@ -24,6 +26,7 @@ class ApiService {
   };
 
   static Future<dynamic> _post(Map<String, dynamic> payload) async {
+    http.Client? client;
     try {
       // Proxy yoqilgan bo'lsa, yangi proxy tanlash
       if (ProxyService.isEnabled) {
@@ -31,15 +34,13 @@ class ApiService {
         print('Using proxy: ${ProxyService.currentProxy}');
       }
       
-      final client = ProxyService.createClient();
+      client = ProxyService.createClient();
       
       final response = await client.post(
         Uri.parse(baseUrl),
         headers: headers,
         body: jsonEncode(payload),
       ).timeout(timeout);
-      
-      client.close();
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
@@ -50,8 +51,14 @@ class ApiService {
       } else {
         throw ApiException('Server error: ${response.statusCode}');
       }
+    } on TimeoutException {
+      throw ApiException('Connection timeout - server javob bermadi');
+    } on SocketException {
+      throw ApiException('Internet aloqasi yo\'q');
     } catch (e) {
       throw ApiException(e.toString());
+    } finally {
+      client?.close(); // Har doim close qilish
     }
   }
 
@@ -226,9 +233,13 @@ class ApiService {
   static Future<List<ChapterItem>> getChapters(String branchId) async {
     final List<ChapterItem> allChapters = [];
     String? afterCursor;
+    int maxIterations = 100; // Safety limit - infinite loop oldini olish
+    int iterations = 0;
     
     // Pagination loop
-    while (true) {
+    while (iterations < maxIterations) {
+      iterations++;
+      
       final payload = {
         'extensions': {
           'persistedQuery': {
@@ -267,6 +278,10 @@ class ApiService {
         print('Chapters pagination error: $e');
         break;
       }
+    }
+    
+    if (iterations >= maxIterations) {
+      print('Warning: Reached max iterations ($maxIterations) in pagination');
     }
     
     return allChapters;

@@ -41,12 +41,25 @@ class MangaProvider extends ChangeNotifier {
   List<Manga> get tagFilteredMangas => _tagFilteredMangas;
 
   Future<void> searchManga(String query) async {
+    // Input validation
+    if (query.trim().isEmpty) {
+      _error = 'Qidiruv so\'rovi bo\'sh bo\'lishi mumkin emas';
+      notifyListeners();
+      return;
+    }
+    
+    if (query.length > 100) {
+      _error = 'Qidiruv so\'rovi juda uzun (max 100 belgi)';
+      notifyListeners();
+      return;
+    }
+    
     _isLoading = true;
     _error = null;
     notifyListeners();
 
     try {
-      _searchResults = await ApiService.searchManga(query);
+      _searchResults = await ApiService.searchManga(query.trim());
     } catch (e) {
       _error = e.toString();
     }
@@ -226,14 +239,17 @@ class MangaProvider extends ChangeNotifier {
   Future<void> loadAllTags() async {
     try {
       _isLoading = true;
+      _error = null; // Eski xatolikni tozalash
       notifyListeners();
       
+      print('MangaProvider: Loading tags...');
       _allTags = await ApiService.getMangaFilters();
+      print('MangaProvider: Loaded ${_allTags.length} tags');
       
       _isLoading = false;
       notifyListeners();
     } catch (e) {
-      print('Load tags error: $e');
+      print('MangaProvider: Load tags error: $e');
       _error = 'Taglarni yuklashda xatolik: $e';
       _isLoading = false;
       notifyListeners();

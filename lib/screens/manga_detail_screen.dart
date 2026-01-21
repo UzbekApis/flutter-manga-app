@@ -127,15 +127,15 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
 
     if (!mounted) return;
     
-    // Background da yuklab olish - dialog yo'q
+    // Background da yuklab olish - snackbar faqat boshida va oxirida
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Chapter ${chapter.number} yuklab olinmoqda...'),
-        duration: const Duration(seconds: 2),
+        duration: const Duration(seconds: 1),
       ),
     );
     
-    // Background download
+    // Background download - await yo'q, halaqit bermaydi
     context.read<MangaProvider>().downloadChapter(
       widget.mangaId,
       widget.mangaSlug,
@@ -145,23 +145,18 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
       chapter.number,
       chapter.name,
       chapterDetail.imageUrls,
-      (curr, tot) {}, // Progress callback - ishlatilmaydi
-    ).then((_) {
-      if (mounted) {
-        setState(() {
-          _downloadedChapters.add(chapter.slug);
-        });
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Chapter ${chapter.number} yuklab olindi!')),
-        );
-      }
-    }).catchError((error) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Xatolik: $error')),
-        );
-      }
-    });
+      (curr, tot) {
+        // Progress callback - faqat tugaganda xabar
+        if (curr == tot && mounted) {
+          setState(() {
+            _downloadedChapters.add(chapter.slug);
+          });
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('✓ Chapter ${chapter.number} yuklab olindi!')),
+          );
+        }
+      },
+    );
   }
 
   Future<void> _downloadMultipleChapters() async {
@@ -263,13 +258,21 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
 
   void _continueReading() {
     if (_readingProgress != null) {
+      final scrollOffset = (_readingProgress!['scrollOffset'] as num?)?.toDouble() ?? 0.0;
+      
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (_) => ReaderScreen(
             chapterSlug: _readingProgress!['lastChapterSlug'] as String,
             chapterNumber: _readingProgress!['lastChapterNumber'] as String,
-            initialPage: _readingProgress!['lastPageIndex'] as int,
+            initialPage: _readingProgress!['lastPageIndex'] as int? ?? 0,
+            initialScrollOffset: scrollOffset,
+            mangaId: widget.mangaId,
+            mangaSlug: widget.mangaSlug,
+            mangaName: _detail?.name,
+            mangaCoverUrl: _detail?.coverUrl,
+            totalChapters: _chapters.length,
           ),
         ),
       );

@@ -328,6 +328,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
   @override
   void dispose() {
     _saveTimer?.cancel();
+    _scrollController.removeListener(_onScroll);
+    
     // Oxirgi marta saqlash
     if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
       if (_scrollController.hasClients) {

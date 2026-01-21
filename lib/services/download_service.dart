@@ -20,6 +20,18 @@ class DownloadService {
       final dir = await getApplicationDocumentsDirectory();
       final chapterDir = Directory('${dir.path}/downloads/$chapterSlug');
       
+      // Agar allaqachon yuklab olingan bo'lsa
+      if (await chapterDir.exists()) {
+        final existingImages = await getOfflineImages(chapterSlug);
+        if (existingImages.length == imageUrls.length) {
+          print('Chapter $chapterSlug already downloaded completely');
+          onProgress(imageUrls.length, imageUrls.length);
+          return chapterDir.path;
+        } else {
+          print('Chapter $chapterSlug partially downloaded (${existingImages.length}/${imageUrls.length}), re-downloading');
+        }
+      }
+      
       if (!await chapterDir.exists()) {
         await chapterDir.create(recursive: true);
       }
@@ -39,6 +51,17 @@ class DownloadService {
             final url = entry.value;
             final fileName = 'page_${index + 1}.jpg';
             final filePath = '${chapterDir.path}/$fileName';
+            
+            // Agar fayl allaqachon mavjud bo'lsa, o'tkazib yuborish
+            final file = File(filePath);
+            if (await file.exists()) {
+              final fileSize = await file.length();
+              if (fileSize > 0) {
+                completed++;
+                onProgress(completed, total);
+                return;
+              }
+            }
             
             try {
               await _dio.download(url, filePath);
