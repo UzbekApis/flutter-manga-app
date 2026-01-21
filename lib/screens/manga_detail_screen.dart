@@ -127,55 +127,41 @@ class _MangaDetailScreenState extends State<MangaDetailScreen> {
 
     if (!mounted) return;
     
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => AlertDialog(
-        title: const Text('Yuklab olinmoqda...'),
-        content: StatefulBuilder(
-          builder: (context, setState) {
-            int current = 0;
-            int total = chapterDetail.imageUrls.length;
-            
-            context.read<MangaProvider>().downloadChapter(
-              widget.mangaId,
-              widget.mangaSlug,
-              _detail?.name ?? '',
-              _detail?.coverUrl,
-              chapter.slug,
-              chapter.number,
-              chapter.name,
-              chapterDetail.imageUrls,
-              (curr, tot) {
-                setState(() {
-                  current = curr;
-                  total = tot;
-                });
-              },
-            ).then((_) {
-              if (mounted) {
-                Navigator.pop(context);
-                setState(() {
-                  _downloadedChapters.add(chapter.slug);
-                });
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Yuklab olindi!')),
-                );
-              }
-            });
-            
-            return Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                LinearProgressIndicator(value: total > 0 ? current / total : 0),
-                const SizedBox(height: 16),
-                Text('$current / $total sahifa'),
-              ],
-            );
-          },
-        ),
+    // Background da yuklab olish - dialog yo'q
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Chapter ${chapter.number} yuklab olinmoqda...'),
+        duration: const Duration(seconds: 2),
       ),
     );
+    
+    // Background download
+    context.read<MangaProvider>().downloadChapter(
+      widget.mangaId,
+      widget.mangaSlug,
+      _detail?.name ?? '',
+      _detail?.coverUrl,
+      chapter.slug,
+      chapter.number,
+      chapter.name,
+      chapterDetail.imageUrls,
+      (curr, tot) {}, // Progress callback - ishlatilmaydi
+    ).then((_) {
+      if (mounted) {
+        setState(() {
+          _downloadedChapters.add(chapter.slug);
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Chapter ${chapter.number} yuklab olindi!')),
+        );
+      }
+    }).catchError((error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Xatolik: $error')),
+        );
+      }
+    });
   }
 
   Future<void> _downloadMultipleChapters() async {

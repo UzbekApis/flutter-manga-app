@@ -55,10 +55,25 @@ class _ReaderScreenState extends State<ReaderScreen> {
   void _onScroll() {
     if (_images.isEmpty) return;
     
-    // Hozirgi sahifani aniqlash
+    // Hozirgi sahifani aniqlash - viewport markazidagi rasm
     final screenHeight = MediaQuery.of(context).size.height;
     final scrollPosition = _scrollController.offset;
-    final newPage = (scrollPosition / screenHeight).floor();
+    
+    // Viewport markazidagi sahifani topish
+    final viewportCenter = scrollPosition + (screenHeight / 2);
+    int newPage = 0;
+    
+    // Har bir rasmning pozitsiyasini hisoblash
+    double currentOffset = 0;
+    for (int i = 0; i < _images.length; i++) {
+      // Har bir rasm taxminan ekran balandligida
+      final imageHeight = screenHeight;
+      if (viewportCenter >= currentOffset && viewportCenter < currentOffset + imageHeight) {
+        newPage = i;
+        break;
+      }
+      currentOffset += imageHeight;
+    }
     
     if (newPage != _currentPage && newPage >= 0 && newPage < _images.length) {
       setState(() {
@@ -94,11 +109,17 @@ class _ReaderScreenState extends State<ReaderScreen> {
         _isLoading = false;
       });
       
+      print('Loaded ${offlineImages.length} offline images');
+      
       // Boshlang'ich sahifaga o'tish
-      if (widget.initialPage > 0) {
+      if (widget.initialPage > 0 && widget.initialPage < offlineImages.length) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          final screenHeight = MediaQuery.of(context).size.height;
-          _scrollController.jumpTo(widget.initialPage * screenHeight);
+          if (_scrollController.hasClients) {
+            final screenHeight = MediaQuery.of(context).size.height;
+            final targetOffset = widget.initialPage * screenHeight;
+            _scrollController.jumpTo(targetOffset);
+            print('Jumped to page ${widget.initialPage} at offset $targetOffset');
+          }
         });
       }
       return;
@@ -113,11 +134,17 @@ class _ReaderScreenState extends State<ReaderScreen> {
         _isLoading = false;
       });
       
+      print('Loaded ${chapter.imageUrls.length} online images');
+      
       // Boshlang'ich sahifaga o'tish
-      if (widget.initialPage > 0) {
+      if (widget.initialPage > 0 && widget.initialPage < chapter.imageUrls.length) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          final screenHeight = MediaQuery.of(context).size.height;
-          _scrollController.jumpTo(widget.initialPage * screenHeight);
+          if (_scrollController.hasClients) {
+            final screenHeight = MediaQuery.of(context).size.height;
+            final targetOffset = widget.initialPage * screenHeight;
+            _scrollController.jumpTo(targetOffset);
+            print('Jumped to page ${widget.initialPage} at offset $targetOffset');
+          }
         });
       }
     }
@@ -126,13 +153,19 @@ class _ReaderScreenState extends State<ReaderScreen> {
   Future<void> _downloadChapter() async {
     if (_chapter == null) return;
 
-    setState(() {
-      _isDownloading = true;
-      _downloadProgress = 0;
-    });
+    // Background download - progress bar ko'rsatmaslik
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Chapter yuklab olinmoqda...'),
+          duration: Duration(seconds: 2),
+        ),
+      );
+    }
 
+    // Background'da yuklab olish
     if (widget.mangaId != null && widget.mangaSlug != null && widget.mangaName != null) {
-      await context.read<MangaProvider>().downloadChapter(
+      context.read<MangaProvider>().downloadChapter(
         widget.mangaId!,
         widget.mangaSlug!,
         widget.mangaName!,
@@ -142,31 +175,35 @@ class _ReaderScreenState extends State<ReaderScreen> {
         null,
         _chapter!.imageUrls,
         (current, total) {
-          setState(() {
-            _downloadProgress = current / total;
-          });
+          // Progress faqat log uchun
+          if (current == total) {
+            if (mounted) {
+              setState(() {
+                _isOffline = true;
+              });
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('✓ Chapter yuklab olindi!')),
+              );
+            }
+          }
         },
       );
     } else {
-      await DownloadService.downloadChapter(
+      DownloadService.downloadChapter(
         widget.chapterSlug,
         _chapter!.imageUrls,
         (current, total) {
-          setState(() {
-            _downloadProgress = current / total;
-          });
+          if (current == total) {
+            if (mounted) {
+              setState(() {
+                _isOffline = true;
+              });
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('✓ Chapter yuklab olindi!')),
+              );
+            }
+          }
         },
-      );
-    }
-
-    setState(() {
-      _isDownloading = false;
-      _isOffline = true;
-    });
-
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Chapter yuklab olindi!')),
       );
     }
   }
@@ -201,53 +238,27 @@ class _ReaderScreenState extends State<ReaderScreen> {
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
-          : Stack(
-              children: [
-                ListView.builder(
-                  controller: _scrollController,
-                  itemCount: _images.length,
-                  itemBuilder: (context, index) {
-                    final imageUrl = _images[index];
-                    return _isOffline
-                        ? Image.file(
-                            File(imageUrl),
-                            fit: BoxFit.fitWidth,
-                          )
-                        : CachedNetworkImage(
-                            imageUrl: imageUrl,
-                            fit: BoxFit.fitWidth,
-                            placeholder: (_, __) => const Center(
-                              child: CircularProgressIndicator(),
-                            ),
-                            errorWidget: (_, __, ___) => const Center(
-                              child: Icon(Icons.error, size: 64),
-                            ),
-                          );
-                  },
-                ),
-                if (_isDownloading)
-                  Container(
-                    color: Colors.black54,
-                    child: Center(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          CircularProgressIndicator(
-                            value: _downloadProgress,
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            '${(_downloadProgress * 100).toInt()}%',
-                            style: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-              ],
+          : ListView.builder(
+              controller: _scrollController,
+              itemCount: _images.length,
+              itemBuilder: (context, index) {
+                final imageUrl = _images[index];
+                return _isOffline
+                    ? Image.file(
+                        File(imageUrl),
+                        fit: BoxFit.fitWidth,
+                      )
+                    : CachedNetworkImage(
+                        imageUrl: imageUrl,
+                        fit: BoxFit.fitWidth,
+                        placeholder: (_, __) => const Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                        errorWidget: (_, __, ___) => const Center(
+                          child: Icon(Icons.error, size: 64),
+                        ),
+                      );
+              },
             ),
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,

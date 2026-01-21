@@ -118,9 +118,17 @@ class DownloadService {
           .map((e) => e.path)
           .toList();
       
-      images.sort();
+      // Raqam bo'yicha to'g'ri tartibda saralash
+      images.sort((a, b) {
+        final aNum = int.tryParse(a.split('page_').last.split('.').first) ?? 0;
+        final bNum = int.tryParse(b.split('page_').last.split('.').first) ?? 0;
+        return aNum.compareTo(bNum);
+      });
+      
+      print('Found ${images.length} offline images for $chapterSlug');
       return images;
     } catch (e) {
+      print('Error getting offline images: $e');
       return [];
     }
   }

@@ -362,7 +362,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const TagFilterScreen()),
+                  MaterialPageRoute(builder: (context) => const TagFilterScreen()),
                 );
               },
               icon: const Icon(Icons.filter_list),
